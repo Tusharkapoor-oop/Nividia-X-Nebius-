@@ -1,0 +1,13 @@
+{
+  "label": "old-pin",
+  "status": "GREEN",
+  "exit_code": 0,
+  "passed": 11,
+  "failed": 0,
+  "errors": 0,
+  "output_tail": [
+    "...........                                                              [100%]",
+    "11 passed in 0.17s"
+  ],
+  "command": "pytest C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\check\\heldout_old-pin  (cwd=C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\check\\repo)"
+}

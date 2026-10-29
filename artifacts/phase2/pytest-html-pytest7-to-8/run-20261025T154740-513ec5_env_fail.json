@@ -1,0 +1,49 @@
+{
+  "status": "ENV_FAIL",
+  "run_id": "run-20261025T154740-513ec5",
+  "result": {
+    "exit_code": 2,
+    "passed": 0,
+    "failed": 0,
+    "errors": 3,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "duration_s": 0.13,
+    "output_tail": [
+      "Traceback:",
+      "C:\\Users\\ACER\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\importlib\\__init__.py:88: in import_module",
+      "    return _bootstrap._gcd_import(name[level:], package, level)",
+      "testing\\test_e2e.py:7: in <module>",
+      "    import selenium.webdriver.support.expected_conditions as ec",
+      "E   ModuleNotFoundError: No module named 'selenium'",
+      "________________ ERROR collecting testing/test_integration.py _________________",
+      "ImportError while importing test module 'C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\cases\\pytest-html\\testing\\test_integration.py'.",
+      "Hint: make sure your test modules/packages have valid Python names.",
+      "Traceback:",
+      "C:\\Users\\ACER\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\importlib\\__init__.py:88: in import_module",
+      "    return _bootstrap._gcd_import(name[level:], package, level)",
+      "testing\\test_integration.py:12: in <module>",
+      "    from assertpy import assert_that",
+      "E   ModuleNotFoundError: No module named 'assertpy'",
+      "____________________ ERROR collecting testing/test_unit.py ____________________",
+      "ImportError while importing test module 'C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\cases\\pytest-html\\testing\\test_unit.py'.",
+      "Hint: make sure your test modules/packages have valid Python names.",
+      "Traceback:",
+      "C:\\Users\\ACER\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\importlib\\__init__.py:88: in import_module",
+      "    return _bootstrap._gcd_import(name[level:], package, level)",
+      "testing\\test_unit.py:6: in <module>",
+      "    from assertpy import assert_that",
+      "E   ModuleNotFoundError: No module named 'assertpy'",
+      "=========================== short test summary info ===========================",
+      "ERROR testing/test_e2e.py",
+      "ERROR testing/test_integration.py",
+      "ERROR testing/test_unit.py",
+      "!!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!",
+      "3 errors in 0.13s"
+    ]
+  },
+  "reasons": [
+    "pytest exit 2: ENV_FAIL"
+  ]
+}

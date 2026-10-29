@@ -1,0 +1,104 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.13.15, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\ACER\Downloads\Nividia X nebius\upgradepilot\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\ACER\Downloads\Nividia X nebius\upgradepilot
+configfile: pyproject.toml
+plugins: anyio-4.15.1, platformdirs-4.13.5, cov-7.1.0
+collecting ... collected 79 items / 4 deselected / 75 selected
+
+tests/test_catalog.py::test_parse_counts_nvidia_models PASSED            [  1%]
+tests/test_catalog.py::test_tier_model_ids_resolve PASSED                [  2%]
+tests/test_catalog.py::test_tier_pricing_and_context_from_catalog PASSED [  4%]
+tests/test_catalog.py::test_config_defaults_match_verified_tiers PASSED  [  5%]
+tests/test_catalog.py::test_build_tiers_uses_live_catalog_prices PASSED  [  6%]
+tests/test_catalog.py::test_missing_model_id_raises PASSED               [  8%]
+tests/test_catalog.py::test_fetch_catalog_retries_then_parses PASSED     [  9%]
+tests/test_catalog.py::test_fetch_catalog_exhaustion_is_typed PASSED     [ 10%]
+tests/test_catalog.py::test_parse_catalog_rejects_non_array PASSED       [ 12%]
+tests/test_catalog.py::test_parse_catalog_all_entries_broken_raises PASSED [ 13%]
+tests/test_catalog.py::test_default_flavor_prefers_largest_context PASSED [ 14%]
+tests/test_cli.py::test_upgrade_requires_named_package_and_to_options PASSED [ 16%]
+tests/test_cli.py::test_upgrade_stub_reports_not_wired PASSED            [ 17%]
+tests/test_cli.py::test_bench_stub_reports_not_wired PASSED              [ 18%]
+tests/test_config.py::test_settings_without_keys_key_state PASSED        [ 20%]
+tests/test_config.py::test_settings_keys_stripped PASSED                 [ 21%]
+tests/test_config.py::test_require_keys_names_every_missing_key PASSED   [ 22%]
+tests/test_config.py::test_nim_mode_requires_nvidia_key_not_nebius PASSED [ 24%]
+tests/test_config.py::test_active_key_follows_provider PASSED            [ 25%]
+tests/test_config.py::test_repo_root_is_beside_tests PASSED              [ 26%]
+tests/test_doctor.py::test_doctor_checks_offline_structure PASSED        [ 28%]
+tests/test_doctor.py::test_doctor_reports_catalog_failure PASSED         [ 29%]
+tests/test_guard.py::test_snapshot_covers_names_conftest_and_config PASSED [ 30%]
+tests/test_guard.py::test_snapshot_ignores_venv_git_cache PASSED         [ 32%]
+tests/test_guard.py::test_weakened_assertion_is_flagged_as_modified PASSED [ 33%]
+tests/test_guard.py::test_deleted_test_file_is_flagged PASSED            [ 34%]
+tests/test_guard.py::test_added_test_file_is_flagged PASSED              [ 36%]
+tests/test_guard.py::test_conftest_and_pytestini_edits_are_flagged PASSED [ 37%]
+tests/test_guard.py::test_source_patch_alone_is_not_flagged PASSED       [ 38%]
+tests/test_guard.py::test_snapshot_json_roundtrip PASSED                 [ 40%]
+tests/test_guard.py::test_guarded_status_folds_guard_evidence_over_pytest PASSED [ 41%]
+tests/test_guard.py::test_report_summary_text PASSED                     [ 42%]
+tests/test_harness_integration.py::test_clone_venv_pytest_end_to_end PASSED [ 44%]
+tests/test_harness_integration.py::test_run_pytest_timeout_kills_tree PASSED [ 45%]
+tests/test_harness_integration.py::test_run_pytest_ignores_ancestor_config PASSED [ 46%]
+tests/test_harness_parser.py::test_parse_basic_pass PASSED               [ 48%]
+tests/test_harness_parser.py::test_parse_mixed_counts PASSED             [ 49%]
+tests/test_harness_parser.py::test_parse_warnings_and_xfailing PASSED    [ 50%]
+tests/test_harness_parser.py::test_no_summary_is_not_fabricated PASSED   [ 52%]
+tests/test_harness_parser.py::test_collect_errors_are_errors PASSED      [ 53%]
+tests/test_llm.py::test_call_cost_math PASSED                            [ 54%]
+tests/test_llm.py::test_estimate_prompt_tokens_is_conservative PASSED    [ 56%]
+tests/test_llm.py::test_preflight_cap_blocks_call PASSED                 [ 57%]
+tests/test_llm.py::test_cap_blocks_followup_after_booking PASSED         [ 58%]
+tests/test_llm.py::test_429_then_success_with_retry PASSED               [ 60%]
+tests/test_llm.py::test_401_is_non_retryable PASSED                      [ 61%]
+tests/test_llm.py::test_empty_choices_is_an_error PASSED                 [ 62%]
+tests/test_llm.py::test_default_max_tokens_comes_from_tier PASSED        [ 64%]
+tests/test_models.py::test_cost_record_tracks_tokens_and_cost PASSED     [ 65%]
+tests/test_models.py::test_llm_response_defaults PASSED                  [ 66%]
+tests/test_provider_modes.py::test_nim_tiers_have_no_prices PASSED       [ 68%]
+tests/test_provider_modes.py::test_call_cost_refuses_unpriced_tier PASSED [ 69%]
+tests/test_provider_modes.py::test_request_cap_blocks_before_network PASSED [ 70%]
+tests/test_provider_modes.py::test_nim_uses_nvidia_key_and_endpoint PASSED [ 72%]
+tests/test_provider_modes.py::test_tokenfactory_payload_has_no_nim_thinking_flag PASSED [ 73%]
+tests/test_provider_modes.py::test_unpriced_calls_are_not_dollarized PASSED [ 74%]
+tests/test_provider_modes.py::test_nim_never_dollarizes_even_with_a_priced_tier PASSED [ 76%]
+tests/test_provider_modes.py::test_tokenfactory_mode_still_usd_caps PASSED [ 77%]
+tests/test_research.py::test_search_uses_bearer_header PASSED            [ 78%]
+tests/test_research.py::test_429_retries_and_succeeds PASSED             [ 80%]
+tests/test_research.py::test_plan_limit_432_clear_error PASSED           [ 81%]
+tests/test_research.py::test_401_clear_error_no_retry PASSED             [ 82%]
+tests/test_retry.py::test_gives_up_after_max_attempts PASSED             [ 84%]
+tests/test_retry.py::test_success_after_failures PASSED                  [ 85%]
+tests/test_retry.py::test_retry_after_header_is_honoured PASSED          [ 86%]
+tests/test_secrets.py::test_mask_never_returns_the_tail PASSED           [ 88%]
+tests/test_secrets.py::test_mask_empty_and_short_values PASSED           [ 89%]
+tests/test_secrets.py::test_redact_known_key_shapes PASSED               [ 90%]
+tests/test_secrets.py::test_redact_leaves_ordinary_words_alone PASSED    [ 92%]
+tests/test_verify.py::test_green_when_exit_zero PASSED                   [ 93%]
+tests/test_verify.py::test_stuck_on_plain_failures PASSED                [ 94%]
+tests/test_verify.py::test_env_fail_on_collector_and_usage_and_no_tests PASSED [ 96%]
+tests/test_verify.py::test_env_fail_on_missing_dependency PASSED         [ 97%]
+tests/test_verify.py::test_run_ledger_roundtrip PASSED                   [ 98%]
+tests/test_web_healthz.py::test_healthz PASSED                           [100%]
+
+============================== warnings summary ===============================
+tests/test_web_healthz.py::test_healthz
+  C:\Users\ACER\Downloads\Nividia X nebius\upgradepilot\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============================ slowest 10 durations =============================
+40.83s call     tests/test_harness_integration.py::test_run_pytest_timeout_kills_tree
+29.72s call     tests/test_harness_integration.py::test_run_pytest_ignores_ancestor_config
+28.29s call     tests/test_harness_integration.py::test_clone_venv_pytest_end_to_end
+1.85s call     tests/test_research.py::test_429_retries_and_succeeds
+1.15s call     tests/test_web_healthz.py::test_healthz
+0.61s call     tests/test_llm.py::test_429_then_success_with_retry
+0.16s call     tests/test_cli.py::test_upgrade_requires_named_package_and_to_options
+0.07s setup    tests/test_cli.py::test_upgrade_requires_named_package_and_to_options
+0.07s call     tests/test_guard.py::test_snapshot_json_roundtrip
+0.05s call     tests/test_doctor.py::test_doctor_checks_offline_structure
+=========== 75 passed, 4 deselected, 1 warning in 107.44s (0:01:47) ===========
+EXIT=0
+DONE

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>agent: pydantic -&gt; 2.12.4 - UpgradePilot recorded runs</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site">
+  <div class="wrap">
+    <h1>UpgradePilot recorded runs</h1>
+    <nav aria-label="Site">
+      <ul>
+        <li><a href="../index.html">Runs</a></li>
+        <li><a href="../comparison.html">Comparison</a></li>
+        <li><a href="../about.html">About this site</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<p><a href="../index.html">Back to all runs</a></p><h1>agent: pydantic -&gt; 2.12.4</h1>
+<p><span class="badge green">GREEN</span> <span class="badge warn">Recorded run</span></p>
+<div class="card"><h2>Summary</h2><dl class="meta"><dt>Status</dt><dd>GREEN</dd><dt>Provider</dt><dd>NVIDIA NIM (dev run - not submission-eligible)</dd><dt>Run class</dt><dd>dev</dd><dt>Recorded at</dt><dd>2026-10-28T04:14:17Z (run id (UTC))</dd><dt>Visible suite</dt><dd>GREEN: 13 passed, 0 failed, 0 error(s), exit 0</dd><dt>Guard</dt><dd>clean</dd><dt>Cost</dt><dd>unpriced (4 call(s))</dd><dt>Tokens</dt><dd>7535 in / 2271 out, 4 call(s)</dd><dt>Evidence file</dt><dd>runs/run-20261028T041417-69228f/upgrade_report.json</dd><dt>Target repo</dt><dd>&lt;local-user-path&gt;\Downloads\Nividia X nebius\upgradepilot\demo\invoicekit</dd><dt>Iterations</dt><dd>3</dd><dt>Old-pin reference</dt><dd>GREEN: 30 passed, 0 failed, 0 error(s), exit 0</dd><dt>Baseline (after bump)</dt><dd>ENV_FAIL: 0 passed, 0 failed, 0 error(s), exit 4</dd><dt>Held-out suite</dt><dd>GREEN: 17 passed, 0 failed, 0 error(s), exit 0</dd><dt>Test split</dt><dd>2 visible, 1 held-out</dd><dt>Guard</dt><dd>clean</dd></dl></div>
+<div class="card"><h2>Models</h2><dl class="meta"><dt>cheap</dt><dd>nvidia/nemotron-3.5-lightning-30b-a3b</dd><dt>default</dt><dd>nvidia/nemotron-3.5-lightning-30b-a3b</dd><dt>strong</dt><dd>nvidia/nemotron-3-ultra-550b-a55b</dd></dl></div>
+<div class="card"><h2>Resolved environment</h2><dl class="meta"><dt>pydantic</dt><dd>2.12.4</dd><dt>pytest</dt><dd>9.2.0</dd><dt>python</dt><dd>3.13.15</dd></dl></div>
+<section aria-labelledby="timeline"><h2 id="timeline">Timeline</h2><ol class="timeline"><li><span class="step">reference_verify</span> <span class="badge warn">ok</span><div class="detail">Old-pin reference: GREEN (30 passed, 0 failed, 0 skipped, 0 xfailed)</div></li><li><span class="step">heldout_split</span> <span class="badge warn">ok</span><div class="detail">2 visible, 1 held-out</div></li><li><span class="step">guard_snapshot</span> <span class="badge warn">ok</span><div class="detail">Hashed 5 test-surface files</div></li><li><span class="step">heldout_quarantine</span> <span class="badge warn">ok</span><div class="detail">Physically quarantined 1 held-out test file(s) outside worktree</div></li><li><span class="step">baseline_verify</span> <span class="badge warn">start</span><div class="detail">Testing visible suite before agent changes</div></li><li><span class="step">baseline_verify</span> <span class="badge warn">ok</span><div class="detail">Breakage confirmed: ENV_FAIL</div></li><li><span class="step">triage</span> <span class="badge warn">start</span> <span class="badge warn">cheap</span><div class="detail">Analyzing failure and query</div></li><li><span class="step">triage</span> <span class="badge warn">ok</span> <span class="badge warn">cheap</span><div class="detail">Query: &#x27;pydantic 2.12 regex removed use pattern Field&#x27;; Candidates: 1</div></li><li><span class="step">research</span> <span class="badge warn">start</span><div class="detail">Searching Tavily for &#x27;pydantic 2.12 regex removed use pattern Field&#x27;</div></li><li><span class="step">research</span> <span class="badge warn">ok</span><div class="detail">Retrieved 3875 chars of context</div></li><li><span class="step">patch_attempt_1</span> <span class="badge warn">start</span> <span class="badge warn">default</span><div class="detail">Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b</div></li><li><span class="step">guard_check_1</span> <span class="badge warn">ok</span><div class="detail">clean (4 test files unchanged)</div></li><li><span class="step">verify_1</span> <span class="badge warn">failed</span><div class="detail">Visible tests did not improve: the run is ENV_FAIL (0 passed, 0 failed, 0 error(s), exit 4), not an improvement on the previous ENV_FAIL (0 passed, 0 failed, 0 error(s)); rolled back 1 file(s)</div></li><li><span class="step">patch_attempt_2</span> <span class="badge warn">start</span> <span class="badge warn">default</span><div class="detail">Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b</div></li><li><span class="step">patch_attempt_2</span> <span class="badge warn">failed</span> <span class="badge warn">default</span><div class="detail">EditError: Model returned invalid edits JSON: {
+  &quot;files&quot;: [
+    {
+      &quot;path&quot;: &quot;src/invoicekit/models.py&quot;,
+      &quot;action&quot;: &quot;write&quot;,
+      &quot;content&quot;: &quot;from __future__ import annotations\n\nfrom decimal import Decimal\nfrom typing import Any, Dic; rolled back 0 file(s)</div></li><li><span class="step">patch_attempt_3</span> <span class="badge warn">start</span> <span class="badge warn">strong</span><div class="detail">Generating patch using nvidia/nemotron-3-ultra-550b-a55b</div></li><li><span class="step">guard_check_3</span> <span class="badge warn">ok</span><div class="detail">clean (4 test files unchanged)</div></li><li><span class="step">verify_3</span> <span class="badge warn">ok</span><div class="detail">Visible tests passed GREEN</div></li><li><span class="step">certify_heldout</span> <span class="badge warn">start</span><div class="detail">Verifying 1 held-out tests</div></li><li><span class="step">certify_heldout</span> <span class="badge warn">ok</span><div class="detail">Held-out verdict: GREEN; final: GREEN</div></li></ol></section>
+<section aria-labelledby="proof"><h2 id="proof">Proof card</h2><pre class="proof"># UpgradePilot Proof Card: `pydantic -&gt; 2.12.4`
+
+- **Run ID:** `run-20261028T041417-69228f`
+- **Target Repo:** `&lt;local-user-path&gt;\Downloads\Nividia X nebius\upgradepilot\demo\invoicekit`
+- **Final Verdict:** **`GREEN`**
+- **Iterations:** 3
+- **Cost:** Unpriced (4 of 4 calls; provider publishes no catalog price)
+- **Tokens:** 7535 prompt + 2271 completion = 9806 total
+- **Guard:** clean (clean (5 test files unchanged))
+- **Provider:** NVIDIA NIM (dev run - not submission-eligible)
+- **Models:** cheap=nvidia/nemotron-3.5-lightning-30b-a3b, default=nvidia/nemotron-3.5-lightning-30b-a3b, strong=nvidia/nemotron-3-ultra-550b-a55b
+- **Environment:** pydantic 2.12.4, pytest 9.2.0, python 3.13.15
+- **Test Suite Partition:** 2 visible, 1 held-out
+
+## Execution Steps
+
+| Step | Status | Tier | Detail |
+|---|---|---|---|
+| reference_verify | `ok` | - | Old-pin reference: GREEN (30 passed, 0 failed, 0 skipped, 0 xfailed) |
+| heldout_split | `ok` | - | 2 visible, 1 held-out |
+| guard_snapshot | `ok` | - | Hashed 5 test-surface files |
+| heldout_quarantine | `ok` | - | Physically quarantined 1 held-out test file(s) outside worktree |
+| baseline_verify | `start` | - | Testing visible suite before agent changes |
+| baseline_verify | `ok` | - | Breakage confirmed: ENV_FAIL |
+| triage | `start` | cheap | Analyzing failure and query |
+| triage | `ok` | cheap | Query: &#x27;pydantic 2.12 regex removed use pattern Field&#x27;; Candidates: 1 |
+| research | `start` | - | Searching Tavily for &#x27;pydantic 2.12 regex removed use pattern Field&#x27; |
+| research | `ok` | - | Retrieved 3875 chars of context |
+| patch_attempt_1 | `start` | default | Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b |
+| guard_check_1 | `ok` | - | clean (4 test files unchanged) |
+| verify_1 | `failed` | - | Visible tests did not improve: the run is ENV_FAIL (0 passed, 0 failed, 0 error(s), exit 4), not an improvement on the previous ENV_FAIL (0 passed, 0 failed, 0 error(s)); rolled back 1 file(s) |
+| patch_attempt_2 | `start` | default | Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b |
+| patch_attempt_2 | `failed` | default | EditError: Model returned invalid edits JSON: {   &quot;files&quot;: [     {       &quot;path&quot;: &quot;src/invoicekit/models.py&quot;,       &quot;action&quot;: &quot;write&quot;,       &quot;content&quot;: &quot;from __future__ import annotations\n\nfrom decimal import Decimal\nfrom typing import Any, Dic; rolled back 0 file(s) |
+| patch_attempt_3 | `start` | strong | Generating patch using nvidia/nemotron-3-ultra-550b-a55b |
+| guard_check_3 | `ok` | - | clean (4 test files unchanged) |
+| verify_3 | `ok` | - | Visible tests passed GREEN |
+| certify_heldout | `start` | - | Verifying 1 held-out tests |
+| certify_heldout | `ok` | - | Held-out verdict: GREEN; final: GREEN |
+
+## Verification Results
+
+- **Old-pin Reference (before the bump):** `GREEN` (exit 0, 30 passed, 0 failed, 0 skipped, 0 xfailed)
+- **Baseline Visible Tests:** `ENV_FAIL` (exit 4, 0 passed, 0 failed in 0.00s)
+- **Final Visible Tests:** `GREEN` (exit 0, 13 passed, 0 failed in 0.08s)
+- **Held-out Tests:** `GREEN` (exit 0, 17 passed, 0 failed in 0.07s)
+
+## Patch Attempts
+
+### Attempt 1 — `rolled_back` (default)
+
+Visible tests did not improve: the run is ENV_FAIL (0 passed, 0 failed, 0 error(s), exit 4), not an improvement on the previous ENV_FAIL (0 passed, 0 failed, 0 error(s)); rolled back 1 file(s)
+
+Verification: `ENV_FAIL` (exit 4, 0 passed, 0 failed)
+
+`src/invoicekit/models.py` (write)
+
+```diff
+--- a/src/invoicekit/models.py
++++ b/src/invoicekit/models.py
+@@ -1,11 +1,3 @@
+-&quot;&quot;&quot;Invoice models for the UpgradePilot demo target.
+-
+-This is an original demo project written for this repository (MIT). It exists
+-so the upgrade pipeline can be exercised end to end on a codebase we own and
+-can talk about freely. It is deliberately pinned to pydantic v1: the upgrade
+-to v2 is the demo, and the project is *not* part of the benchmark.
+-&quot;&quot;&quot;
+-
+ from __future__ import annotations
+ 
+ from decimal import Decimal
+@@ -21,7 +13,7 @@
+     &quot;&quot;&quot;The party being invoiced.&quot;&quot;&quot;
+ 
+     name: str = Field(..., min_length=1, max_length=80)
+-    email: str = Field(..., regex=EMAIL_PATTERN)
++    email: str = Field(..., pattern=EMAIL_PATTERN)
+ 
+     class Config:
+         allow_mutation = False
+
+```
+
+### Attempt 2 — `invalid` (default)
+
+EditError: Model returned invalid edits JSON: {
+  &quot;files&quot;: [
+    {
+      &quot;path&quot;: &quot;src/invoicekit/models.py&quot;,
+      &quot;action&quot;: &quot;write&quot;,
+      &quot;content&quot;: &quot;from __future__ import annotations\n\nfrom decimal import Decimal\nfrom typing import Any, Dic; rolled back 0 file(s)
+
+### Attempt 3 — `GREEN` (strong)
+
+Verification: `GREEN` (exit 0, 13 passed, 0 failed)
+
+`src/invoicekit/models.py` (write)
+
+```diff
+--- a/src/invoicekit/models.py
++++ b/src/invoicekit/models.py
+@@ -11,7 +11,7 @@
+ from decimal import Decimal
+ from typing import Any, Dict, List
+ 
+-from pydantic import BaseModel, Field, root_validator, validator
++from pydantic import BaseModel, Field, field_validator, model_validator
+ 
+ EMAIL_PATTERN = r&quot;^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$&quot;
+ MAX_LINE_ITEMS = 50
+@@ -21,10 +21,9 @@
+     &quot;&quot;&quot;The party being invoiced.&quot;&quot;&quot;
+ 
+     name: str = Field(..., min_length=1, max_length=80)
+-    email: str = Field(..., regex=EMAIL_PATTERN)
++    email: str = Field(..., pattern=EMAIL_PATTERN)
+ 
+-    class Config:
+-        allow_mutation = False
++    model_config = {&quot;frozen&quot;: True}
+ 
+ 
+ class LineItem(BaseModel):
+@@ -34,10 +33,10 @@
+     quantity: int = Field(..., gt=0, le=1000)
+     unit_price: Decimal = Field(..., ge=0)
+ 
+-    class Config:
+-        allow_mutation = False
++    model_config = {&quot;frozen&quot;: True}
+ 
+-    @validator(&quot;sku&quot;, pre=True)
++    @field_validator(&quot;sku&quot;, mode=&quot;before&quot;)
++    @classmethod
+     def _normalise_sku(cls, value: Any) -&gt; Any:
+         if isinstance(value, str):
+             return value.strip().upper()
+@@ -52,25 +51,25 @@
+     line_items: List[LineItem]
+     discount_pct: Decimal = Field(default=Decimal(&quot;0&quot;), ge=0, le=100)
+ 
+-    class Config:
+-        allow_mutation = False
++    model_config = {&quot;frozen&quot;: True}
+ 
+-    @validator(&quot;currency&quot;, pre=True)
++    @field_validator(&quot;currency&quot;, mode=&quot;before&quot;)
++    @classmethod
+     def _normalise_currency(cls, value: Any) -&gt; Any:
+         if isinstance(value, str):
+             return value.strip().upper()
+         return value
+ 
+-    @root_validator
+-    def _check_invoice_shape(cls, values: Dict[str, Any]) -&gt; Dict[str, Any]:
+-        items = values.get(&quot;line_items&quot;) or []
++    @model_validator(mode=&quot;after&quot;)
++    def _check_invoice_shape(self) -&gt; &quot;Invoice&quot;:
++        items = self.line_items
+         if not items:
+             raise ValueError(&quot;an invoice needs at least one line item&quot;)
+         if len(items) &gt; MAX_LINE_ITEMS:
+             raise ValueError(f&quot;an invoice supports at most {MAX_LINE_ITEMS} line items&quot;)
+-        return values
++        return self
+ 
+     @classmethod
+     def from_payload(cls, payload: Dict[str, Any]) -&gt; &quot;Invoice&quot;:
+         &quot;&quot;&quot;Build an invoice from a raw mapping (API payload, JSON body, ...).&quot;&quot;&quot;
+-        return cls.parse_obj(payload)
++        return cls.model_validate(payload)
+
+```
+
+
+## Applied Patches
+
+### `src/invoicekit/models.py` (write)
+
+```diff
+--- a/src/invoicekit/models.py
++++ b/src/invoicekit/models.py
+@@ -11,7 +11,7 @@
+ from decimal import Decimal
+ from typing import Any, Dict, List
+ 
+-from pydantic import BaseModel, Field, root_validator, validator
++from pydantic import BaseModel, Field, field_validator, model_validator
+ 
+ EMAIL_PATTERN = r&quot;^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$&quot;
+ MAX_LINE_ITEMS = 50
+@@ -21,10 +21,9 @@
+     &quot;&quot;&quot;The party being invoiced.&quot;&quot;&quot;
+ 
+     name: str = Field(..., min_length=1, max_length=80)
+-    email: str = Field(..., regex=EMAIL_PATTERN)
++    email: str = Field(..., pattern=EMAIL_PATTERN)
+ 
+-    class Config:
+-        allow_mutation = False
++    model_config = {&quot;frozen&quot;: True}
+ 
+ 
+ class LineItem(BaseModel):
+@@ -34,10 +33,10 @@
+     quantity: int = Field(..., gt=0, le=1000)
+     unit_price: Decimal = Field(..., ge=0)
+ 
+-    class Config:
+-        allow_mutation = False
++    model_config = {&quot;frozen&quot;: True}
+ 
+-    @validator(&quot;sku&quot;, pre=True)
++    @field_validator(&quot;sku&quot;, mode=&quot;before&quot;)
++    @classmethod
+     def _normalise_sku(cls, value: Any) -&gt; Any:
+         if isinstance(value, str):
+             return value.strip().upper()
+@@ -52,25 +51,25 @@
+     line_items: List[LineItem]
+     discount_pct: Decimal = Field(default=Decimal(&quot;0&quot;), ge=0, le=100)
+ 
+-    class Config:
+-        allow_mutation = False
++    model_config = {&quot;frozen&quot;: True}
+ 
+-    @validator(&quot;currency&quot;, pre=True)
++    @field_validator(&quot;currency&quot;, mode=&quot;before&quot;)
++    @classmethod
+     def _normalise_currency(cls, value: Any) -&gt; Any:
+         if isinstance(value, str):
+             return value.strip().upper()
+         return value
+ 
+-    @root_validator
+-    def _check_invoice_shape(cls, values: Dict[str, Any]) -&gt; Dict[str, Any]:
+-        items = values.get(&quot;line_items&quot;) or []
++    @model_validator(mode=&quot;after&quot;)
++    def _check_invoice_shape(self) -&gt; &quot;Invoice&quot;:
++        items = self.line_items
+         if not items:
+             raise ValueError(&quot;an invoice needs at least one line item&quot;)
+         if len(items) &gt; MAX_LINE_ITEMS:
+             raise ValueError(f&quot;an invoice supports at most {MAX_LINE_ITEMS} line items&quot;)
+-        return values
++        return self
+ 
+     @classmethod
+     def from_payload(cls, payload: Dict[str, Any]) -&gt; &quot;Invoice&quot;:
+         &quot;&quot;&quot;Build an invoice from a raw mapping (API payload, JSON body, ...).&quot;&quot;&quot;
+-        return cls.parse_obj(payload)
++        return cls.model_validate(payload)
+
+```
+
+</pre></section>
+<p><a href="../data/agent-run-20261028T041417-69228f/artifact.json">Raw JSON evidence</a></p>
+</main>
+<footer class="site"><div class="wrap">Static site generated from artifact JSON files. Every value on these pages was read from a file in the repository.</div></footer>
+</body>
+</html>

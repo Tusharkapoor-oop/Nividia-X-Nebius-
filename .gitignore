@@ -1,0 +1,52 @@
+# Byte-compiled / optimised
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets – NEVER commit
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Test / coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# mypy
+.mypy_cache/
+
+# ruff
+.ruff_cache/
+
+# Benchmark work directories (created at runtime)
+bench/workdirs/
+
+# Disposable run checkouts/venvs; keep the adjacent JSON proof artifacts.
+artifacts/runs/*/repo/
+
+# Logs
+*.log
+logs/

@@ -1,0 +1,51 @@
+{
+  "case_id": "pydantic-argparse-pydantic1-to-2",
+  "strategy": "codemod",
+  "status": "ENV_FAIL",
+  "exit_code": 4,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "suite_duration_s": 0.0,
+  "wall_time_s": 103.29,
+  "iterations": 0,
+  "llm_calls": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "cost_usd": null,
+  "fully_priced": false,
+  "guard_clean": true,
+  "guard_summary": "clean (9 test files unchanged)",
+  "edits": [
+    "pydantic_argparse/argparse/parser.py"
+  ],
+  "notes": [
+    "old-pin suite: GREEN (746 passed, 0 failed, 0 skipped, 0 xfailed)",
+    "pre-install pin: pytest-mock==3.14.1",
+    "post-bump suite before any repair: ENV_FAIL",
+    "applied 11 mechanical rule(s) to 1 file(s)",
+    "ambiguous renames (.dict(), .json(), .copy()) are intentionally skipped"
+  ],
+  "artifacts": [
+    "artifacts\\phase5\\pydantic-argparse-pydantic1-to-2\\codemod\\old-pin\\run-20261028T035539-0cb696_green.json",
+    "artifacts\\phase5\\pydantic-argparse-pydantic1-to-2\\codemod\\bump-only\\run-20261028T035603-9aad81_env_fail.json",
+    "artifacts\\phase5\\pydantic-argparse-pydantic1-to-2\\codemod\\final\\run-20261028T035605-28bdb3_env_fail.json",
+    "artifacts\\phase5\\pydantic-argparse-pydantic1-to-2\\codemod\\events.jsonl"
+  ],
+  "recorded_at": "2026-10-28T03:54:24.376Z",
+  "provider": "nvidia-nim",
+  "run_class": "dev",
+  "models": {
+    "cheap": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "default": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "strong": "nvidia/nemotron-3-ultra-550b-a55b"
+  },
+  "versions": {
+    "pydantic": "2.12.4",
+    "pytest": "9.2.0",
+    "python": "3.13.15"
+  },
+  "reference_status": "GREEN",
+  "reference_skipped": 0,
+  "reference_xfailed": 0
+}

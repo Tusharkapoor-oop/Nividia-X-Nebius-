@@ -1,0 +1,14 @@
+{
+  "iteration": 1,
+  "tier": "default",
+  "status": "guard_violation",
+  "detail": "Guard violation (tests skipped/shadowed): skipped_test: pytest.summary (1 newly skipped test(s) (baseline: 0, current: 1)); skipped_test: pytest.summary (1 newly xfailed test(s) (baseline: 0, current: 1)); rolled back 1 file(s)",
+  "edits": [
+    {
+      "path": "pytest_lazyfixture.py",
+      "action": "write",
+      "diff": "--- a/pytest_lazyfixture.py\n+++ b/pytest_lazyfixture.py\n@@ -47,13 +47,6 @@\n         request.param = request.getfixturevalue(val.name)\n \n \n-def pytest_runtest_call(item):\n-    if hasattr(item, 'funcargs'):\n-        for arg, val in item.funcargs.items():\n-            if is_lazy_fixture(val):\n-                item.funcargs[arg] = item._request.getfixturevalue(val.name)\n-\n-\n @pytest.hookimpl(hookwrapper=True)\n def pytest_pycollect_makeitem(collector, name, obj):\n     global current_node\n@@ -66,12 +59,10 @@\n     if is_lazy_fixture(val):\n         return val.name\n \n-\n @pytest.hookimpl(hookwrapper=True)\n def pytest_generate_tests(metafunc):\n     yield\n \n-    normalize_metafunc_calls(metafunc, 'funcargs')\n     normalize_metafunc_calls(metafunc, 'params')\n \n \n@@ -102,6 +93,7 @@\n     fm = metafunc.config.pluginmanager.get_plugin('funcmanage')\n \n     used_keys = used_keys or set()\n+    # CallSpec2 now uses 'params' instead of 'funcargs'\n     valtype_keys = set(getattr(callspec, valtype).keys()) - used_keys\n \n     for arg in valtype_keys:\n"
+    }
+  ],
+  "verify_outcome": null
+}

@@ -1,0 +1,92 @@
+{
+  "case_id": "demo-invoicekit-pydantic1-to-2",
+  "strategy": "bump-only",
+  "status": "ENV_FAIL",
+  "status_note": "bump-only final suite verdict",
+  "agent_status": "",
+  "suite": "0P/0F/0E (exit 4)",
+  "exit_code": 4,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "iterations": 0,
+  "llm_calls": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "cost_usd": null,
+  "fully_priced": false,
+  "wall_time_s": 86.72,
+  "recorded_at": "2026-10-28T03:43:52.794Z",
+  "provider": "nvidia-nim",
+  "run_class": "dev",
+  "models": {
+    "cheap": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "default": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "strong": "nvidia/nemotron-3-ultra-550b-a55b"
+  },
+  "versions": {
+    "pydantic": "2.12.4",
+    "pytest": "9.2.0",
+    "python": "3.13.15"
+  },
+  "old_pin": "pydantic==1.10.22",
+  "new_pin": "pydantic==2.12.4",
+  "old_pin_status": "GREEN",
+  "bumped_status": "ENV_FAIL",
+  "reference_status": "GREEN",
+  "guard_clean": true,
+  "guard_summary": "clean (5 test files unchanged)",
+  "edits": [],
+  "notes": [
+    "post-bump suite before repair: ENV_FAIL"
+  ],
+  "heldout_old_pin": {
+    "label": "old-pin",
+    "status": "GREEN",
+    "exit_code": 0,
+    "passed": 11,
+    "failed": 0,
+    "errors": 0,
+    "output_tail": [
+      "...........                                                              [100%]",
+      "11 passed in 0.24s"
+    ],
+    "command": "pytest <local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\bump-only\\heldout_old-pin  (cwd=<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\bump-only\\repo)"
+  },
+  "heldout_after": {
+    "label": "after",
+    "status": "ENV_FAIL",
+    "exit_code": 2,
+    "passed": 0,
+    "failed": 0,
+    "errors": 1,
+    "output_tail": [
+      "=================================== ERRORS ====================================",
+      "__________________ ERROR collecting test_heldout_contract.py __________________",
+      "..\\heldout_after\\test_heldout_contract.py:27: in <module>",
+      "    from invoicekit import (",
+      "src\\invoicekit\\__init__.py:3: in <module>",
+      "    from invoicekit.models import MAX_LINE_ITEMS, Customer, Invoice, LineItem",
+      "src\\invoicekit\\models.py:20: in <module>",
+      "    class Customer(BaseModel):",
+      "src\\invoicekit\\models.py:24: in Customer",
+      "    email: str = Field(..., regex=EMAIL_PATTERN)",
+      "                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+      ".upv-venv\\Lib\\site-packages\\pydantic\\fields.py:1322: in Field",
+      "    raise PydanticUserError('`regex` is removed. use `pattern` instead', code='removed-kwargs')",
+      "E   pydantic.errors.PydanticUserError: `regex` is removed. use `pattern` instead",
+      "E   ",
+      "E   For further information visit https://errors.pydantic.dev/2.12/u/removed-kwargs",
+      "=========================== short test summary info ===========================",
+      "ERROR test_heldout_contract.py - pydantic.errors.PydanticUserError: `regex` i...",
+      "!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+      "1 error in 0.44s"
+    ],
+    "command": "pytest <local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\bump-only\\heldout_after  (cwd=<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\bump-only\\repo)"
+  },
+  "artifacts": [
+    "artifacts/demo/demo-invoicekit-pydantic1-to-2/bump-only/run-20261028T034500-b7bb74_green.json",
+    "artifacts/demo/demo-invoicekit-pydantic1-to-2/bump-only/run-20261028T034515-a279f1_env_fail.json",
+    "artifacts/demo/demo-invoicekit-pydantic1-to-2/bump-only/events.jsonl"
+  ]
+}

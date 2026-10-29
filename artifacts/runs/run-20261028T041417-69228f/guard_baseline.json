@@ -1,0 +1,44 @@
+{
+  "root": "repo",
+  "created_at": "2026-10-28T04:16:16+00:00",
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "sha256": "a4d34a95c601b3d51490fcd77c0381865851e5056ff3e2b5086bbaa4e3794cd4",
+      "size": 528
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "2b04e2808af01371f24a02f962158110b05ca1007d3e9eb442faf39f28aa4f3d",
+      "size": 762
+    },
+    {
+      "path": "tests/test_models.py",
+      "sha256": "38db61c1fdce432513f1402a347f45c89772cf2ae238710734db99a9a31ed3fc",
+      "size": 3283
+    },
+    {
+      "path": "tests/test_pricing.py",
+      "sha256": "b85e6e42e50dc288aef5fc117ae7f8ec24c3d54a15ac106da7b162aea1f570f3",
+      "size": 1827
+    },
+    {
+      "path": "tests/test_report.py",
+      "sha256": "780bf0340711fe936fbd11c41376f9bd57e8621908d171c11140b9defaeabcba",
+      "size": 1095
+    }
+  ],
+  "all_repo_files": [
+    "pyproject.toml",
+    "README.md",
+    "requirements.txt",
+    "src/invoicekit/__init__.py",
+    "src/invoicekit/models.py",
+    "src/invoicekit/pricing.py",
+    "src/invoicekit/report.py",
+    "tests/conftest.py",
+    "tests/test_models.py",
+    "tests/test_pricing.py",
+    "tests/test_report.py"
+  ]
+}

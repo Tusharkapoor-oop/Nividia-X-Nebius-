@@ -1,0 +1,30 @@
+{
+  "status": "GREEN",
+  "run_id": "run-20261028T040447-1f3f5b",
+  "result": {
+    "exit_code": 0,
+    "passed": 45,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 1,
+    "xfailed": 1,
+    "xpassed": 0,
+    "duration_s": 0.0,
+    "output_tail": [
+      "============================= test session starts =============================",
+      "platform win32 -- Python 3.13.15, pytest-7.4.4, pluggy-1.7.0",
+      "rootdir: C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pytest-lazy-fixture-pytest7-to-8--single-shot\\repo",
+      "configfile: .upv-venv\\.upgradepilot-empty-pytest.ini",
+      "plugins: lazy-fixture-0.6.3, platformdirs-4.13.6, mock-3.17.0",
+      "collected 47 items",
+      "",
+      "tests\\test_lazyfixture.py ..........................................x.s. [ 97%]",
+      ".                                                                        [100%]",
+      "",
+      "================== 45 passed, 1 skipped, 1 xfailed in 2.45s ==================="
+    ]
+  },
+  "reasons": [
+    "pytest exit 0: GREEN"
+  ]
+}

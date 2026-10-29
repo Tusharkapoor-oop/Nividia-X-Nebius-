@@ -1,0 +1,41 @@
+{
+  "root": "repo",
+  "created_at": "2026-10-28T04:06:57+00:00",
+  "files": [
+    {
+      "path": "setup.cfg",
+      "sha256": "ac29f78e239db3616fb893c490c6f879ff60fabb14e84bbdcc4a977ed25921a9",
+      "size": 123
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "06550ae8731fdb5bbad6878ef9e1b4763ca4d41784eb7dc8208f04e6b48fd6f5",
+      "size": 29
+    },
+    {
+      "path": "tests/test_lazyfixture.py",
+      "sha256": "ac9064eacb8de3f58478afe47786069f095e70d497fa11c7bcfc7f06f59d2f3c",
+      "size": 28321
+    },
+    {
+      "path": "tox.ini",
+      "sha256": "44bb0d738c829fa6c88745c7156397c881c27e501ee2e9a1d0b61fbcec6c2265",
+      "size": 2124
+    }
+  ],
+  "all_repo_files": [
+    ".gitignore",
+    ".travis.yml",
+    "appveyor.yml",
+    "LICENSE",
+    "MANIFEST.in",
+    "pytest_lazyfixture.py",
+    "README.rst",
+    "requirements.txt",
+    "setup.cfg",
+    "setup.py",
+    "tests/conftest.py",
+    "tests/test_lazyfixture.py",
+    "tox.ini"
+  ]
+}

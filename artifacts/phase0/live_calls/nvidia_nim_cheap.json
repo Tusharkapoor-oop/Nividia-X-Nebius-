@@ -1,0 +1,64 @@
+{
+  "provider": "nvidia-nim",
+  "tier": "cheap",
+  "model_id": "nvidia/nemotron-3.5-lightning-30b-a3b",
+  "priced": false,
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a test probe. Answer concisely."
+      },
+      {
+        "role": "user",
+        "content": "Reply with exactly: OK"
+      }
+    ],
+    "max_tokens": 128,
+    "temperature": 0.0
+  },
+  "raw_response": {
+    "id": "chatcmpl-9dc87544-3243-4f80-b93a-63a401a70c90",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "content": "OK",
+          "role": "assistant",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "logprobs": null
+      }
+    ],
+    "created": 1792732266,
+    "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "object": "chat.completion",
+    "usage": {
+      "prompt_tokens": 32,
+      "completion_tokens": 2,
+      "total_tokens": 34,
+      "prompt_tokens_details": {
+        "audio_tokens": null,
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": null,
+        "audio_tokens": null,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": null
+      }
+    }
+  },
+  "usage": {
+    "prompt_tokens": 32,
+    "completion_tokens": 2,
+    "total_tokens": 34
+  },
+  "finish_reason": "stop",
+  "content_preview": "OK",
+  "cost_usd": null,
+  "unpriced_calls": 1
+}

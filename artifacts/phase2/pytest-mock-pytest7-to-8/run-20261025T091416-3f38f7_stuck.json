@@ -1,0 +1,49 @@
+{
+  "status": "STUCK",
+  "run_id": "run-20261025T091416-3f38f7",
+  "result": {
+    "exit_code": 1,
+    "passed": 142,
+    "failed": 10,
+    "errors": 0,
+    "skipped": 16,
+    "xfailed": 0,
+    "xpassed": 0,
+    "duration_s": 11.13,
+    "output_tail": [
+      "",
+      "tests\\test_pytest_mock.py:1438",
+      "  C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\cases\\pytest-mock\\tests\\test_pytest_mock.py:1438: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html",
+      "    @pytest.mark.asyncio",
+      "",
+      "tests/test_pytest_mock.py: 15 warnings",
+      "  C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\cases\\pytest-mock\\.upv-venv\\Lib\\site-packages\\_pytest\\python.py:183: PytestUnhandledCoroutineWarning: async def functions are not natively supported and have been skipped.",
+      "  You need to install a suitable plugin for your async framework, for example:",
+      "    - anyio",
+      "    - pytest-asyncio",
+      "    - pytest-tornasync",
+      "    - pytest-trio",
+      "    - pytest-twisted",
+      "    warnings.warn(PytestUnhandledCoroutineWarning(msg.format(nodeid)))",
+      "",
+      "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+      "=========================== short test summary info ===========================",
+      "SKIPPED [15] .upv-venv\\Lib\\site-packages\\_pytest\\python.py:184: async def function and no async plugin installed (see warnings)",
+      "SKIPPED [1] tests\\test_pytest_mock.py:1612: could not import 'mock': No module named 'mock'",
+      "FAILED tests/test_pytest_mock.py::TestIntrospection::test_called_args - asser...",
+      "FAILED tests/test_pytest_mock.py::TestIntrospection::test_called_kwargs - ass...",
+      "FAILED tests/test_pytest_mock.py::TestIntrospection::test_autospec_binds_arguments",
+      "FAILED tests/test_pytest_mock.py::TestIntrospection::test_detailed - Failed: ...",
+      "FAILED tests/test_pytest_mock.py::TestIntrospection::test_detailed_async - Fa...",
+      "FAILED tests/test_pytest_mock.py::TestStop::test_plain_stopall - Failed: noma...",
+      "FAILED tests/test_pytest_mock.py::TestFixtureScopes::test_class - Failed: nom...",
+      "FAILED tests/test_pytest_mock.py::TestFixtureScopes::test_scope[module] - Fai...",
+      "FAILED tests/test_pytest_mock.py::TestFixtureScopes::test_scope[package] - Fa...",
+      "FAILED tests/test_pytest_mock.py::TestFixtureScopes::test_scope[session] - Fa...",
+      "10 failed, 142 passed, 16 skipped, 24 warnings in 11.13s"
+    ]
+  },
+  "reasons": [
+    "pytest exit 1: STUCK"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "status": "STUCK",
+  "run_id": "run-20261025T161010-e55955",
+  "result": {
+    "exit_code": 1,
+    "passed": 137,
+    "failed": 5,
+    "errors": 18,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "duration_s": 24.21,
+    "output_tail": [
+      "    rootdir: C:\\Users\\ACER\\AppData\\Local\\Temp\\pytest-of-ACER\\pytest-228\\test_xdist_ordering0",
+      "  For more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning",
+      "    config = pluginmanager.hook.pytest_cmdline_parse(",
+      "",
+      "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+      "=========================== short test summary info ===========================",
+      "FAILED tests/test_dependency.py::test_order_dependencies_no_auto_mark - Asser...",
+      "FAILED tests/test_dependency.py::test_order_dependencies_auto_mark - Failed: ...",
+      "FAILED tests/test_order_group_scope_dep.py::test_class_group_scope_module_scope",
+      "FAILED tests/test_order_group_scope_named_dep.py::test_class_group_scope_module_scope",
+      "FAILED tests/test_xdist_handling.py::test_xdist_ordering - assert <ExitCode.U...",
+      "ERROR tests/test_dependency.py::test_dependency_already_ordered_with_ordering",
+      "ERROR tests/test_dependency.py::test_order_dependency_ordered",
+      "ERROR tests/test_dependency.py::test_order_multiple_dependencies_ordered",
+      "ERROR tests/test_dependency.py::test_order_named_dependency_ordered",
+      "ERROR tests/test_dependency.py::test_dependency_in_class",
+      "ERROR tests/test_dependency.py::test_unresolved_dependency_in_class",
+      "ERROR tests/test_dependency.py::test_named_dependency_in_class",
+      "ERROR tests/test_dependency.py::test_dependencies_in_classes",
+      "ERROR tests/test_dependency.py::test_class_scope_dependencies",
+      "ERROR tests/test_dependency.py::test_unknown_dependency",
+      "ERROR tests/test_sparse_ordinals.py::test_first_sparse",
+      "ERROR tests/test_sparse_ordinals.py::test_second_sparse",
+      "ERROR tests/test_sparse_ordinals.py::test_third_sparse",
+      "ERROR tests/test_sparse_ordinals.py::test_second_to_last_sparse",
+      "ERROR tests/test_sparse_ordinals.py::test_last_sparse",
+      "ERROR tests/test_sparse_ordinals.py::test_first_last_sparse",
+      "ERROR tests/test_sparse_ordinals.py::test_duplicate_numbers_sparse",
+      "ERROR tests/test_sparse_ordinals.py::test_end_items_sparse",
+      "5 failed, 137 passed, 14 warnings, 18 errors in 24.21s"
+    ]
+  },
+  "reasons": [
+    "pytest exit 1: STUCK"
+  ]
+}

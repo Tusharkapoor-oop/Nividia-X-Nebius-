@@ -1,0 +1,43 @@
+{
+  "status": "ENV_FAIL",
+  "run_id": "run-20261028T035603-9aad81",
+  "result": {
+    "exit_code": 4,
+    "passed": 0,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "duration_s": 0.0,
+    "output_tail": [
+      "ImportError while loading conftest 'C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pydantic-argparse-pydantic1-to-2--codemod\\repo\\tests\\conftest.py'.",
+      "tests\\conftest.py:20: in <module>",
+      "    from pydantic_argparse.argparse import actions",
+      "pydantic_argparse\\__init__.py:12: in <module>",
+      "    from pydantic_argparse.argparse import ArgumentParser",
+      "pydantic_argparse\\argparse\\__init__.py:13: in <module>",
+      "    from pydantic_argparse.argparse.parser import ArgumentParser",
+      "pydantic_argparse\\argparse\\parser.py:26: in <module>",
+      "    from pydantic_argparse import parsers",
+      "pydantic_argparse\\parsers\\__init__.py:11: in <module>",
+      "    from pydantic_argparse.parsers import boolean",
+      "pydantic_argparse\\parsers\\boolean.py:20: in <module>",
+      "    from pydantic_argparse import utils",
+      "pydantic_argparse\\utils\\__init__.py:14: in <module>",
+      "    from pydantic_argparse.utils import arguments",
+      "pydantic_argparse\\utils\\arguments.py:12: in <module>",
+      "    def name(field: pydantic.fields.ModelField, invert: bool = False) -> str:",
+      "                    ^^^^^^^^^^^^^^^",
+      ".upv-venv\\Lib\\site-packages\\pydantic\\__init__.py:437: in __getattr__",
+      "    return _getattr_migration(attr_name)",
+      "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+      ".upv-venv\\Lib\\site-packages\\pydantic\\_migration.py:314: in wrapper",
+      "    raise AttributeError(f'module {module!r} has no attribute {name!r}')",
+      "E   AttributeError: module 'pydantic' has no attribute 'fields'. Did you mean: 'Field'?"
+    ]
+  },
+  "reasons": [
+    "pytest exit 4: ENV_FAIL"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "method": "sha256-path",
+  "held_out_fraction": 0.25,
+  "total": 7,
+  "visible": [
+    "tests/argparse/test_actions.py",
+    "tests/argparse/test_parser.py",
+    "tests/utils/test_arguments.py",
+    "tests/utils/test_errors.py",
+    "tests/utils/test_namespaces.py"
+  ],
+  "held_out": [
+    "tests/functional/test_environment_variables.py",
+    "tests/utils/test_types.py"
+  ]
+}

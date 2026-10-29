@@ -1,0 +1,50 @@
+{
+  "iteration": 1,
+  "tier": "default",
+  "status": "rolled_back",
+  "detail": "Visible tests did not improve: the run is ENV_FAIL (0 passed, 0 failed, 0 error(s), exit 4), not an improvement on the previous ENV_FAIL (0 passed, 0 failed, 0 error(s)); rolled back 1 file(s)",
+  "edits": [
+    {
+      "path": "src/invoicekit/models.py",
+      "action": "write",
+      "diff": "--- a/src/invoicekit/models.py\n+++ b/src/invoicekit/models.py\n@@ -1,11 +1,3 @@\n-\"\"\"Invoice models for the UpgradePilot demo target.\n-\n-This is an original demo project written for this repository (MIT). It exists\n-so the upgrade pipeline can be exercised end to end on a codebase we own and\n-can talk about freely. It is deliberately pinned to pydantic v1: the upgrade\n-to v2 is the demo, and the project is *not* part of the benchmark.\n-\"\"\"\n-\n from __future__ import annotations\n \n from decimal import Decimal\n@@ -21,7 +13,7 @@\n     \"\"\"The party being invoiced.\"\"\"\n \n     name: str = Field(..., min_length=1, max_length=80)\n-    email: str = Field(..., regex=EMAIL_PATTERN)\n+    email: str = Field(..., pattern=EMAIL_PATTERN)\n \n     class Config:\n         allow_mutation = False\n"
+    }
+  ],
+  "verify_outcome": {
+    "status": "ENV_FAIL",
+    "run_id": "run-20261028T041632-4d8965",
+    "result": {
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "duration_s": 0.0,
+      "output_tail": [
+        "ImportError while loading conftest 'C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\repo\\tests\\conftest.py'.",
+        "tests\\conftest.py:9: in <module>",
+        "    from invoicekit import Customer, Invoice, LineItem",
+        "src\\invoicekit\\__init__.py:3: in <module>",
+        "    from invoicekit.models import MAX_LINE_ITEMS, Customer, Invoice, LineItem",
+        "src\\invoicekit\\models.py:39: in <module>",
+        "    class Invoice(BaseModel):",
+        "src\\invoicekit\\models.py:56: in Invoice",
+        "    @root_validator",
+        "     ^^^^^^^^^^^^^^",
+        ".upv-venv\\Lib\\site-packages\\pydantic\\deprecated\\class_validators.py:234: in root_validator",
+        "    return root_validator()(*__args)  # type: ignore",
+        "           ^^^^^^^^^^^^^^^^",
+        ".upv-venv\\Lib\\site-packages\\pydantic\\deprecated\\class_validators.py:240: in root_validator",
+        "    raise PydanticUserError(",
+        "E   pydantic.errors.PydanticUserError: If you use `@root_validator` with pre=False (the default) you MUST specify `skip_on_failure=True`. Note that `@root_validator` is deprecated and should be replaced with `@model_validator`.",
+        "E",
+        "E   For further information visit https://errors.pydantic.dev/2.12/u/root-validator-pre-skip"
+      ]
+    },
+    "reasons": [
+      "pytest exit 4: ENV_FAIL"
+    ]
+  }
+}

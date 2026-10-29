@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>demo-invoicekit-pydantic1-to-2: agent - UpgradePilot recorded runs</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site">
+  <div class="wrap">
+    <h1>UpgradePilot recorded runs</h1>
+    <nav aria-label="Site">
+      <ul>
+        <li><a href="../index.html">Runs</a></li>
+        <li><a href="../comparison.html">Comparison</a></li>
+        <li><a href="../about.html">About this site</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<p><a href="../index.html">Back to all runs</a></p><h1>demo-invoicekit-pydantic1-to-2: agent</h1>
+<p><span class="badge green">GREEN</span> <span class="badge warn">Recorded run</span></p>
+<div class="card"><h2>Summary</h2><dl class="meta"><dt>Status</dt><dd>GREEN</dd><dt>Provider</dt><dd>NVIDIA NIM (dev run - not submission-eligible)</dd><dt>Run class</dt><dd>dev</dd><dt>Recorded at</dt><dd>2026-10-28T03:49:59.209Z (result file (UTC))</dd><dt>Visible suite</dt><dd>visible 13P/0F/0E (exit 0); held-out GREEN: 11 passed, 0 failed</dd><dt>Guard</dt><dd>clean</dd><dt>Cost</dt><dd>unpriced</dd><dt>Tokens</dt><dd>7288 in / 2206 out, 4 call(s)</dd><dt>Evidence file</dt><dd>demo/demo-invoicekit-pydantic1-to-2/agent/result.json</dd><dt>Case</dt><dd>demo-invoicekit-pydantic1-to-2</dd><dt>Strategy</dt><dd>agent</dd><dt>Old pin</dt><dd>pydantic==1.10.22</dd><dt>New pin</dt><dd>pydantic==2.12.4</dd><dt>Old-pin suite</dt><dd>GREEN</dd><dt>Post-bump suite</dt><dd>ENV_FAIL</dd><dt>Held-out contract</dt><dd>GREEN: 11 passed, 0 failed</dd><dt>Agent verdict</dt><dd>GREEN</dd><dt>Guard</dt><dd>clean</dd><dt>Wall time</dt><dd>126.44 s</dd></dl></div>
+<div class="card"><h2>Models</h2><dl class="meta"><dt>cheap</dt><dd>nvidia/nemotron-3.5-lightning-30b-a3b</dd><dt>default</dt><dd>nvidia/nemotron-3.5-lightning-30b-a3b</dd><dt>strong</dt><dd>nvidia/nemotron-3-ultra-550b-a55b</dd></dl></div>
+<div class="card"><h2>Resolved environment</h2><dl class="meta"><dt>pydantic</dt><dd>2.12.4</dd><dt>pytest</dt><dd>9.2.0</dd><dt>python</dt><dd>3.13.15</dd></dl></div>
+<section aria-labelledby="notes"><h2 id="notes">Notes</h2><ul><li>visible suite and external held-out contract both GREEN</li><li>post-bump suite before repair: ENV_FAIL</li><li>baseline_verify: Testing visible suite before agent changes</li><li>triage: Analyzing failure and query</li><li>research: Searching Tavily for &#x27;pydantic 2.12 regex removed use pattern Field&#x27;</li><li>patch_attempt_1: Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b</li><li>verify_1: Visible tests did not improve: the run is ENV_FAIL (0 passed, 0 failed, 0 error(s), exit 4), not an improvement on the previous ENV_FAIL (0 passed, 0 failed, 0 error(s)); rolled back 1 file(s)</li><li>patch_attempt_2: Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b</li><li>verify_2: Visible tests did not improve: the run is ENV_FAIL (0 passed, 0 failed, 0 error(s), exit 4), not an improvement on the previous ENV_FAIL (0 passed, 0 failed, 0 error(s)); rolled back 1 file(s)</li><li>patch_attempt_3: Generating patch using nvidia/nemotron-3-ultra-550b-a55b</li><li>certify_heldout: Verifying 1 held-out tests</li></ul></section>
+<p><a href="../data/demo-demo-invoicekit-pydantic1-to-2-agent/artifact.json">Raw JSON evidence</a></p>
+</main>
+<footer class="site"><div class="wrap">Static site generated from artifact JSON files. Every value on these pages was read from a file in the repository.</div></footer>
+</body>
+</html>

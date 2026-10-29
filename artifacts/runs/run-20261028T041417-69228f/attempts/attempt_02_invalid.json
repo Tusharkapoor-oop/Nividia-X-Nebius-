@@ -1,0 +1,8 @@
+{
+  "iteration": 2,
+  "tier": "default",
+  "status": "invalid",
+  "detail": "EditError: Model returned invalid edits JSON: {\n  \"files\": [\n    {\n      \"path\": \"src/invoicekit/models.py\",\n      \"action\": \"write\",\n      \"content\": \"from __future__ import annotations\\n\\nfrom decimal import Decimal\\nfrom typing import Any, Dic; rolled back 0 file(s)",
+  "edits": [],
+  "verify_outcome": null
+}

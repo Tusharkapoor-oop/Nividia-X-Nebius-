@@ -1,0 +1,33 @@
+{
+  "status": "GREEN",
+  "run_id": "run-20261027T111739-bb11fd",
+  "result": {
+    "exit_code": 0,
+    "passed": 18,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 6,
+    "xfailed": 5,
+    "xpassed": 0,
+    "duration_s": 1.75,
+    "output_tail": [
+      ".s.s.s.s..s..s.xxxxx.........                                            [100%]",
+      "=========================== short test summary info ===========================",
+      "SKIPPED [1] tests\\test_subtests.py:30: could not import 'xdist': No module named 'xdist'",
+      "SKIPPED [1] tests\\test_subtests.py:54: could not import 'xdist': No module named 'xdist'",
+      "SKIPPED [1] tests\\test_subtests.py:88: could not import 'xdist': No module named 'xdist'",
+      "SKIPPED [1] tests\\test_subtests.py:109: could not import 'xdist': No module named 'xdist'",
+      "SKIPPED [1] tests\\test_subtests.py:160: could not import 'xdist': No module named 'xdist'",
+      "SKIPPED [1] tests\\test_subtests.py:201: could not import 'xdist': No module named 'xdist'",
+      "XFAIL tests/test_subtests.py::TestSubTest::test_skip[pytest-normal] - Not producing the expected results (#5)",
+      "XFAIL tests/test_subtests.py::TestSubTest::test_skip[pytest-xdist] - Not producing the expected results (#5)",
+      "XFAIL tests/test_subtests.py::TestSubTest::test_xfail[unittest] - Not producing the expected results (#5)",
+      "XFAIL tests/test_subtests.py::TestSubTest::test_xfail[pytest-normal] - Not producing the expected results (#5)",
+      "XFAIL tests/test_subtests.py::TestSubTest::test_xfail[pytest-xdist] - Not producing the expected results (#5)",
+      "18 passed, 6 skipped, 5 xfailed in 1.75s"
+    ]
+  },
+  "reasons": [
+    "pytest exit 0: GREEN"
+  ]
+}

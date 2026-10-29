@@ -1,0 +1,33 @@
+{
+  "provider": "nvidia-nim",
+  "tiers": {
+    "cheap": {
+      "role": "cheap",
+      "model_id": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "max_tokens": 4096,
+      "context_window": null,
+      "input_price_per_m": null,
+      "output_price_per_m": null
+    },
+    "default": {
+      "role": "default",
+      "model_id": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "max_tokens": 4096,
+      "context_window": null,
+      "input_price_per_m": null,
+      "output_price_per_m": null
+    },
+    "strong": {
+      "role": "strong",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "max_tokens": 4096,
+      "context_window": null,
+      "input_price_per_m": null,
+      "output_price_per_m": null
+    }
+  },
+  "cap": {
+    "mode": "requests",
+    "max_calls": 12
+  }
+}

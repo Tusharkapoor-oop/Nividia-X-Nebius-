@@ -1,0 +1,56 @@
+{
+  "iteration": 4,
+  "tier": "strong",
+  "status": "rolled_back",
+  "detail": "Visible tests did not improve: the run is ENV_FAIL (0 passed, 0 failed, 0 error(s), exit 4), not an improvement on the previous ENV_FAIL (0 passed, 0 failed, 0 error(s)); rolled back 1 file(s)",
+  "edits": [
+    {
+      "path": "pydantic_argparse/utils/arguments.py",
+      "action": "write",
+      "diff": "--- a/pydantic_argparse/utils/arguments.py\n+++ b/pydantic_argparse/utils/arguments.py\n@@ -7,13 +7,14 @@\n \n # Third-Party\n import pydantic\n+from pydantic.fields import FieldInfo\n \n \n-def name(field: pydantic.fields.ModelField, invert: bool = False) -> str:\n+def name(field: pydantic.fields.FieldInfo, invert: bool = False) -> str:\n     \"\"\"Standardises argument name.\n \n     Args:\n-        field (pydantic.fields.ModelField): Field to construct name for.\n+        field (pydantic.fields.FieldInfo): Field to construct name for.\n         invert (bool): Whether to invert the name by prepending `--no-`.\n \n     Returns:\n@@ -26,17 +27,17 @@\n     return f\"{prefix}{field.alias.replace('_', '-')}\"\n \n \n-def description(field: pydantic.fields.ModelField) -> str:\n+def description(field: pydantic.fields.FieldInfo) -> str:\n     \"\"\"Standardises argument description.\n \n     Args:\n-        field (pydantic.fields.ModelField): Field to construct description for.\n+        field (pydantic.fields.FieldInfo): Field to construct description for.\n \n     Returns:\n         str: Standardised description of the argument.\n     \"\"\"\n     # Construct Default String\n-    default = f\"(default: {field.get_default()})\" if not field.required else None\n+    default = f\"(default: {field.default})\" if field.default is not pydantic.fields.PydanticUndefined else None\n \n     # Return Standardised Description String\n-    return \" \".join(filter(None, [field.field_info.description, default]))\n+    return \" \".join(filter(None, [field.description, default]))\n"
+    }
+  ],
+  "verify_outcome": {
+    "status": "ENV_FAIL",
+    "run_id": "run-20261028T035937-0d737b",
+    "result": {
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "duration_s": 0.0,
+      "output_tail": [
+        "ImportError while loading conftest 'C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pydantic-argparse-pydantic1-to-2--agent\\repo\\tests\\conftest.py'.",
+        "tests\\conftest.py:20: in <module>",
+        "    from pydantic_argparse.argparse import actions",
+        "pydantic_argparse\\__init__.py:12: in <module>",
+        "    from pydantic_argparse.argparse import ArgumentParser",
+        "pydantic_argparse\\argparse\\__init__.py:13: in <module>",
+        "    from pydantic_argparse.argparse.parser import ArgumentParser",
+        "pydantic_argparse\\argparse\\parser.py:26: in <module>",
+        "    from pydantic_argparse import parsers",
+        "pydantic_argparse\\parsers\\__init__.py:11: in <module>",
+        "    from pydantic_argparse.parsers import boolean",
+        "pydantic_argparse\\parsers\\boolean.py:20: in <module>",
+        "    from pydantic_argparse import utils",
+        "pydantic_argparse\\utils\\__init__.py:15: in <module>",
+        "    from pydantic_argparse.utils import errors",
+        "pydantic_argparse\\utils\\errors.py:16: in <module>",
+        "    PydanticError = Union[pydantic.ValidationError, pydantic.env_settings.SettingsError]",
+        "                                                    ^^^^^^^^^^^^^^^^^^^^^",
+        ".upv-venv\\Lib\\site-packages\\pydantic\\__init__.py:437: in __getattr__",
+        "    return _getattr_migration(attr_name)",
+        "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        ".upv-venv\\Lib\\site-packages\\pydantic\\_migration.py:314: in wrapper",
+        "    raise AttributeError(f'module {module!r} has no attribute {name!r}')",
+        "E   AttributeError: module 'pydantic' has no attribute 'env_settings'"
+      ]
+    },
+    "reasons": [
+      "pytest exit 4: ENV_FAIL"
+    ]
+  }
+}

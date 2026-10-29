@@ -1,0 +1,117 @@
+{
+  "case_id": "demo-invoicekit-pydantic1-to-2",
+  "source": "demo/invoicekit",
+  "heldout_contract": "demo/heldout",
+  "provider": "none (no model is called in this check)",
+  "old_pin": "pydantic==1.10.22",
+  "new_pin": "pydantic==2.12.4",
+  "versions": {
+    "pydantic": "2.12.4",
+    "pytest": "9.2.0",
+    "python": "3.13.15"
+  },
+  "old_pin_suite": {
+    "status": "GREEN",
+    "run_id": "run-20261028T034016-d5fe74",
+    "result": {
+      "exit_code": 0,
+      "passed": 30,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "duration_s": 0.16,
+      "output_tail": [
+        "..............................                                           [100%]",
+        "30 passed in 0.16s"
+      ]
+    },
+    "reasons": [
+      "pytest exit 0: GREEN"
+    ]
+  },
+  "bumped_suite": {
+    "status": "ENV_FAIL",
+    "run_id": "run-20261028T034030-908bf0",
+    "result": {
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "duration_s": 0.0,
+      "output_tail": [
+        "ImportError while loading conftest 'C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\check\\repo\\tests\\conftest.py'.",
+        "tests\\conftest.py:9: in <module>",
+        "    from invoicekit import Customer, Invoice, LineItem",
+        "src\\invoicekit\\__init__.py:3: in <module>",
+        "    from invoicekit.models import MAX_LINE_ITEMS, Customer, Invoice, LineItem",
+        "src\\invoicekit\\models.py:20: in <module>",
+        "    class Customer(BaseModel):",
+        "src\\invoicekit\\models.py:24: in Customer",
+        "    email: str = Field(..., regex=EMAIL_PATTERN)",
+        "                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        ".upv-venv\\Lib\\site-packages\\pydantic\\fields.py:1322: in Field",
+        "    raise PydanticUserError('`regex` is removed. use `pattern` instead', code='removed-kwargs')",
+        "E   pydantic.errors.PydanticUserError: `regex` is removed. use `pattern` instead",
+        "E",
+        "E   For further information visit https://errors.pydantic.dev/2.12/u/removed-kwargs"
+      ]
+    },
+    "reasons": [
+      "pytest exit 4: ENV_FAIL"
+    ]
+  },
+  "heldout_on_old_pin": {
+    "label": "old-pin",
+    "status": "GREEN",
+    "exit_code": 0,
+    "passed": 11,
+    "failed": 0,
+    "errors": 0,
+    "output_tail": [
+      "...........                                                              [100%]",
+      "11 passed in 0.17s"
+    ],
+    "command": "pytest C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\check\\heldout_old-pin  (cwd=C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\check\\repo)"
+  },
+  "heldout_on_broken_code": {
+    "label": "bumped",
+    "status": "ENV_FAIL",
+    "exit_code": 2,
+    "passed": 0,
+    "failed": 0,
+    "errors": 1,
+    "output_tail": [
+      "=================================== ERRORS ====================================",
+      "__________________ ERROR collecting test_heldout_contract.py __________________",
+      "..\\heldout_bumped\\test_heldout_contract.py:27: in <module>",
+      "    from invoicekit import (",
+      "src\\invoicekit\\__init__.py:3: in <module>",
+      "    from invoicekit.models import MAX_LINE_ITEMS, Customer, Invoice, LineItem",
+      "src\\invoicekit\\models.py:20: in <module>",
+      "    class Customer(BaseModel):",
+      "src\\invoicekit\\models.py:24: in Customer",
+      "    email: str = Field(..., regex=EMAIL_PATTERN)",
+      "                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+      ".upv-venv\\Lib\\site-packages\\pydantic\\fields.py:1322: in Field",
+      "    raise PydanticUserError('`regex` is removed. use `pattern` instead', code='removed-kwargs')",
+      "E   pydantic.errors.PydanticUserError: `regex` is removed. use `pattern` instead",
+      "E   ",
+      "E   For further information visit https://errors.pydantic.dev/2.12/u/removed-kwargs",
+      "=========================== short test summary info ===========================",
+      "ERROR test_heldout_contract.py - pydantic.errors.PydanticUserError: `regex` i...",
+      "!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+      "1 error in 0.63s"
+    ],
+    "command": "pytest C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\check\\heldout_bumped  (cwd=C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\check\\repo)"
+  },
+  "artifacts": [
+    "artifacts/demo/demo-invoicekit-pydantic1-to-2/preconditions/run-20261028T034016-d5fe74_green.json",
+    "artifacts/demo/demo-invoicekit-pydantic1-to-2/preconditions/run-20261028T034030-908bf0_env_fail.json"
+  ],
+  "recorded_at": "2026-10-28T03:40:35.420Z"
+}

@@ -1,0 +1,9 @@
+{
+  "method": "sha256-path",
+  "held_out_fraction": 0.0,
+  "total": 1,
+  "visible": [
+    "tests/test_lazyfixture.py"
+  ],
+  "held_out": []
+}

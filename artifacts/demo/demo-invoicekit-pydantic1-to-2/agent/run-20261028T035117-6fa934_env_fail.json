@@ -1,0 +1,34 @@
+{
+  "status": "ENV_FAIL",
+  "run_id": "run-20261028T035117-6fa934",
+  "result": {
+    "exit_code": 4,
+    "passed": 0,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "duration_s": 0.0,
+    "output_tail": [
+      "ImportError while loading conftest 'C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\agent\\repo\\tests\\conftest.py'.",
+      "tests\\conftest.py:9: in <module>",
+      "    from invoicekit import Customer, Invoice, LineItem",
+      "src\\invoicekit\\__init__.py:3: in <module>",
+      "    from invoicekit.models import MAX_LINE_ITEMS, Customer, Invoice, LineItem",
+      "src\\invoicekit\\models.py:20: in <module>",
+      "    class Customer(BaseModel):",
+      "src\\invoicekit\\models.py:24: in Customer",
+      "    email: str = Field(..., regex=EMAIL_PATTERN)",
+      "                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+      ".upv-venv\\Lib\\site-packages\\pydantic\\fields.py:1322: in Field",
+      "    raise PydanticUserError('`regex` is removed. use `pattern` instead', code='removed-kwargs')",
+      "E   pydantic.errors.PydanticUserError: `regex` is removed. use `pattern` instead",
+      "E",
+      "E   For further information visit https://errors.pydantic.dev/2.12/u/removed-kwargs"
+    ]
+  },
+  "reasons": [
+    "pytest exit 4: ENV_FAIL"
+  ]
+}

@@ -1,0 +1,36 @@
+name: CI
+
+on: [push]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-type-test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install with all extras
+        run: |
+          python -m pip install -U pip
+          pip install -e ".[web,dev]"
+      - name: Ruff lint
+        run: ruff check src/ tests/
+      - name: Ruff format check
+        run: ruff format --check src/ tests/
+      - name: Mypy (strict, source and tests)
+        run: mypy src/upgradepilot/ tests/
+      - name: Offline tests (live API tests excluded)
+        run: pytest -m "not live" --cov=src/upgradepilot --cov-report=term-missing --cov-fail-under=70 --tb=short -q
+        env:
+          # doctor's 'keys' check is allowed to FAIL here; doctor isn't run in CI.
+          NEBIUS_API_KEY: ""
+          TAVILY_API_KEY: ""

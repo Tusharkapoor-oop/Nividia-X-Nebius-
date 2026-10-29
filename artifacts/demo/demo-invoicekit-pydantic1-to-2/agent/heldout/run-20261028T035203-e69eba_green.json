@@ -1,0 +1,27 @@
+{
+  "status": "GREEN",
+  "run_id": "run-20261028T035203-e69eba",
+  "result": {
+    "exit_code": 0,
+    "passed": 11,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "duration_s": 0.26,
+    "output_tail": [
+      "...........                                                              [100%]",
+      "============================== warnings summary ===============================",
+      "test_heldout_contract.py::test_summary_payload_serialises_totals_as_strings",
+      "  C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\agent\\repo\\src\\invoicekit\\report.py:33: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/",
+      "    payload = invoice.dict()",
+      "",
+      "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+      "11 passed, 1 warning in 0.26s"
+    ]
+  },
+  "reasons": [
+    "pytest exit 0: GREEN"
+  ]
+}

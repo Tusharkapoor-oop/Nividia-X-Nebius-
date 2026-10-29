@@ -1,0 +1,49 @@
+{
+  "status": "STUCK",
+  "run_id": "run-20261025T091526-32bd6d",
+  "result": {
+    "exit_code": 1,
+    "passed": 223,
+    "failed": 12,
+    "errors": 0,
+    "skipped": 6,
+    "xfailed": 9,
+    "xpassed": 1,
+    "duration_s": 0.0,
+    "output_tail": [
+      "ERROR test_d.py",
+      "============================== 4 errors in 1.17s ==============================",
+      "=========================== short test summary info ===========================",
+      "SKIPPED [3] .upv-venv\\Lib\\site-packages\\_pytest\\pytester.py:1536: could not import 'pexpect': No module named 'pexpect'",
+      "SKIPPED [1] testing\\acceptance_test.py:821: pytest 7.4.4 does not have the pytest_warning_captured hook.",
+      "SKIPPED [1] testing\\test_plugin.py:150: could not import 'psutil': No module named 'psutil'",
+      "SKIPPED [1] testing\\test_workermanage.py:456: no 'gspecs' option found",
+      "XFAIL testing/acceptance_test.py::TestDistEach::test_simple_diffoutput - reason: [NOTRUN] other python versions might not have pytest installed",
+      "XFAIL testing/acceptance_test.py::test_terminate_on_hangingnode",
+      "XFAIL testing/acceptance_test.py::test_session_hooks - reason: [NOTRUN] works if run outside test suite",
+      "XFAIL testing/test_dsession.py::TestDistReporter::test_rsync_printing",
+      "XFAIL testing/test_dsession.py::test_pytest_issue419 - duplicate test ids not supported yet",
+      "XFAIL testing/test_looponfail.py::TestLooponFailing::test_looponfail_removed_test - broken by pytest 3.1+",
+      "XFAIL testing/test_remote.py::TestWorkerInteractor::test_happy_run_events_converted - reason: implement a simple test for event production",
+      "XFAIL testing/test_workermanage.py::TestNodeManager::test_rsync_roots_no_roots - reason: [NOTRUN] ",
+      "XFAIL testing/test_workermanage.py::test_unserialize_warning_msg[Nested] - Nested warning classes are not supported.",
+      "XPASS testing/acceptance_test.py::TestNodeFailure::test_each_multiple #20: xdist race condition on node restart",
+      "FAILED testing/acceptance_test.py::TestLocking::test_single_file[each] - Asse...",
+      "FAILED testing/acceptance_test.py::TestLocking::test_single_file[load] - Asse...",
+      "FAILED testing/acceptance_test.py::TestLocking::test_single_file[loadscope]",
+      "FAILED testing/acceptance_test.py::TestLocking::test_single_file[loadfile] - ...",
+      "FAILED testing/acceptance_test.py::TestLocking::test_single_file[worksteal]",
+      "FAILED testing/acceptance_test.py::TestLocking::test_single_file[no] - Assert...",
+      "FAILED testing/acceptance_test.py::TestLocking::test_multi_file[each] - Asser...",
+      "FAILED testing/acceptance_test.py::TestLocking::test_multi_file[load] - Asser...",
+      "FAILED testing/acceptance_test.py::TestLocking::test_multi_file[loadscope] - ...",
+      "FAILED testing/acceptance_test.py::TestLocking::test_multi_file[loadfile] - A...",
+      "FAILED testing/acceptance_test.py::TestLocking::test_multi_file[worksteal] - ...",
+      "FAILED testing/acceptance_test.py::TestLocking::test_multi_file[no] - Asserti...",
+      "12 failed, 223 passed, 6 skipped, 9 xfailed, 1 xpassed in 170.45s (0:02:50)"
+    ]
+  },
+  "reasons": [
+    "pytest exit 1: STUCK"
+  ]
+}

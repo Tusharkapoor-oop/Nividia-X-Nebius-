@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=69.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "upgradepilot"
+version = "0.1.0"
+description = "Trustworthy dependency-upgrade agent for Python projects. Patches code with Nemotron on Token Factory, verifies with held-out checks, and never edits tests."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Tushar Kapoor"}]
+keywords = ["dependency", "upgrade", "pytest", "agent", "nemotron", "tokenfactory", "nebius"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
+]
+
+dependencies = [
+    "pydantic>=2.7,<3",
+    "pydantic-settings>=2.3,<3",
+    "httpx>=0.27,<1",
+    "python-dotenv>=1.0,<2",
+    "rich>=13.7,<14",
+    "typer>=0.12,<1",
+]
+
+[project.optional-dependencies]
+web = [
+    "fastapi>=0.111,<1",
+    "uvicorn[standard]>=0.30,<1",
+    "sse-starlette>=2.1,<3",
+    "jinja2>=3.1,<4",
+    "itsdangerous>=2.2,<3",
+]
+dev = [
+    "ruff>=0.5",
+    "mypy>=1.10",
+    "pytest>=8.2",
+    "pytest-cov>=5.0",
+    "pre-commit>=3.7",
+]
+
+[project.scripts]
+upgradepilot = "upgradepilot.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+upgradepilot = ["web/static/**/*", "web/templates/**/*"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = "-ra -q --strict-markers --strict-config -m 'not live'"
+markers = [
+    "live: tests that make real provider/Tavily API calls (run explicitly with -m live)",
+    "subprocess: tests that spawn real local processes (git/venv/pip/pytest); no billable APIs",
+]
+
+[tool.coverage.run]
+source = ["src/upgradepilot"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+]

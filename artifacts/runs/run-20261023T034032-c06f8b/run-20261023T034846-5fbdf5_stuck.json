@@ -1,0 +1,49 @@
+{
+  "status": "STUCK",
+  "run_id": "run-20261023T034846-5fbdf5",
+  "result": {
+    "exit_code": 1,
+    "passed": 12,
+    "failed": 33,
+    "errors": 0,
+    "skipped": 1,
+    "xfailed": 1,
+    "xpassed": 0,
+    "duration_s": 0.0,
+    "output_tail": [
+      "FAILED .upv-venv::test_lazy_fixture_is_value_in_parametrize - AssertionError:...",
+      "FAILED .upv-venv::test_lazy_fixture_as_funcarg_in_parametrize_with_indirect",
+      "FAILED .upv-venv::test_lazy_fixture_is_value_in_parametrize_with_indirect - A...",
+      "FAILED .upv-venv::test_lazy_fixture_as_param_of_fixture - AssertionError: ([]...",
+      "FAILED .upv-venv::test_lazy_fixture_in_params_which_has_params - AssertionErr...",
+      "FAILED .upv-venv::test_lazy_fixture_three_times_nested - AssertionError: ([],...",
+      "FAILED .upv-venv::test_lazy_fixture_three_times_nested_with_one_failed - Asse...",
+      "FAILED .upv-venv::test_lazy_fixture_common_dependency - AssertionError: ([], ...",
+      "FAILED .upv-venv::test_lazy_fixture_common_dependency_with_getfixturevalue - ...",
+      "FAILED .upv-venv::test_issues2 - AssertionError: ([], [], [<CollectReport 'te...",
+      "FAILED .upv-venv::test_issues2_2 - AssertionError: ([], [], [<CollectReport '...",
+      "FAILED .upv-venv::test_issues3_autouse_fixtures_should_run_first - AssertionE...",
+      "FAILED .upv-venv::test_issues10_xfail - AssertionError: ([], [], [<CollectRep...",
+      "FAILED .upv-venv::test_issues12_skip_test_function - AssertionError: ([], [],...",
+      "FAILED .upv-venv::test_issues12_skip_test_method - AssertionError: assert {'e...",
+      "FAILED .upv-venv::test_issues12_lf_as_method_of_test_class - AssertionError: ...",
+      "FAILED .upv-venv::test_argnames_initialized_in_right_order - AssertionError: ...",
+      "FAILED .upv-venv::test_argnames_initialized_in_right_order2 - AssertionError:...",
+      "FAILED .upv-venv::test_lazy_fixtures_with_subfixtures - AssertionError: ([], ...",
+      "FAILED .upv-venv::test_lazy_fixtures_in_subfixture - AssertionError: ([], [],...",
+      "FAILED .upv-venv::test_issues23[False] - AssertionError: ([], [], [<CollectRe...",
+      "FAILED .upv-venv::test_issues23[True] - AssertionError: ([], [], [<CollectRep...",
+      "FAILED .upv-venv::test_lazy_fixture_nested_fixtures - AssertionError: ([], []...",
+      "FAILED .upv-venv::test_usefixture_runs_before_function_fixtures - AssertionEr...",
+      "FAILED .upv-venv::test_autouse_and_usefixture_module_scope_runs_before_function_fixtures",
+      "FAILED .upv-venv::test_session_autouse_and_usefixture_module_scope_runs_before_function_fixtures[session]",
+      "FAILED .upv-venv::test_session_autouse_and_usefixture_module_scope_runs_before_function_fixtures[module]",
+      "FAILED .upv-venv::test_module_scope_runs_before_function_fixtures - Assertion...",
+      "FAILED .upv-venv::test_lazy_fixture_ids - AssertionError: assert 'test_the_th...",
+      "33 failed, 12 passed, 1 skipped, 1 xfailed, 4 warnings in 78.89s (0:01:18)"
+    ]
+  },
+  "reasons": [
+    "pytest exit 1: STUCK"
+  ]
+}

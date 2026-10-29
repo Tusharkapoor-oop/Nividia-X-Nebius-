@@ -1,0 +1,388 @@
+{
+  "run_id": "run-20261028T041417-69228f",
+  "request": {
+    "repo": "<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\demo\\invoicekit",
+    "package": "pydantic",
+    "to_version": "2.12.4",
+    "from_version": null
+  },
+  "status": "GREEN",
+  "iterations_used": 3,
+  "steps": [
+    {
+      "step": "reference_verify",
+      "status": "ok",
+      "detail": "Old-pin reference: GREEN (30 passed, 0 failed, 0 skipped, 0 xfailed)",
+      "tier": null
+    },
+    {
+      "step": "heldout_split",
+      "status": "ok",
+      "detail": "2 visible, 1 held-out",
+      "tier": null
+    },
+    {
+      "step": "guard_snapshot",
+      "status": "ok",
+      "detail": "Hashed 5 test-surface files",
+      "tier": null
+    },
+    {
+      "step": "heldout_quarantine",
+      "status": "ok",
+      "detail": "Physically quarantined 1 held-out test file(s) outside worktree",
+      "tier": null
+    },
+    {
+      "step": "baseline_verify",
+      "status": "start",
+      "detail": "Testing visible suite before agent changes",
+      "tier": null
+    },
+    {
+      "step": "baseline_verify",
+      "status": "ok",
+      "detail": "Breakage confirmed: ENV_FAIL",
+      "tier": null
+    },
+    {
+      "step": "triage",
+      "status": "start",
+      "detail": "Analyzing failure and query",
+      "tier": "cheap"
+    },
+    {
+      "step": "triage",
+      "status": "ok",
+      "detail": "Query: 'pydantic 2.12 regex removed use pattern Field'; Candidates: 1",
+      "tier": "cheap"
+    },
+    {
+      "step": "research",
+      "status": "start",
+      "detail": "Searching Tavily for 'pydantic 2.12 regex removed use pattern Field'",
+      "tier": null
+    },
+    {
+      "step": "research",
+      "status": "ok",
+      "detail": "Retrieved 3875 chars of context",
+      "tier": null
+    },
+    {
+      "step": "patch_attempt_1",
+      "status": "start",
+      "detail": "Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b",
+      "tier": "default"
+    },
+    {
+      "step": "guard_check_1",
+      "status": "ok",
+      "detail": "clean (4 test files unchanged)",
+      "tier": null
+    },
+    {
+      "step": "verify_1",
+      "status": "failed",
+      "detail": "Visible tests did not improve: the run is ENV_FAIL (0 passed, 0 failed, 0 error(s), exit 4), not an improvement on the previous ENV_FAIL (0 passed, 0 failed, 0 error(s)); rolled back 1 file(s)",
+      "tier": null
+    },
+    {
+      "step": "patch_attempt_2",
+      "status": "start",
+      "detail": "Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b",
+      "tier": "default"
+    },
+    {
+      "step": "patch_attempt_2",
+      "status": "failed",
+      "detail": "EditError: Model returned invalid edits JSON: {\n  \"files\": [\n    {\n      \"path\": \"src/invoicekit/models.py\",\n      \"action\": \"write\",\n      \"content\": \"from __future__ import annotations\\n\\nfrom decimal import Decimal\\nfrom typing import Any, Dic; rolled back 0 file(s)",
+      "tier": "default"
+    },
+    {
+      "step": "patch_attempt_3",
+      "status": "start",
+      "detail": "Generating patch using nvidia/nemotron-3-ultra-550b-a55b",
+      "tier": "strong"
+    },
+    {
+      "step": "guard_check_3",
+      "status": "ok",
+      "detail": "clean (4 test files unchanged)",
+      "tier": null
+    },
+    {
+      "step": "verify_3",
+      "status": "ok",
+      "detail": "Visible tests passed GREEN",
+      "tier": null
+    },
+    {
+      "step": "certify_heldout",
+      "status": "start",
+      "detail": "Verifying 1 held-out tests",
+      "tier": null
+    },
+    {
+      "step": "certify_heldout",
+      "status": "ok",
+      "detail": "Held-out verdict: GREEN; final: GREEN",
+      "tier": null
+    }
+  ],
+  "cost": {
+    "total_prompt_tokens": 7535,
+    "total_completion_tokens": 2271,
+    "total_cost_usd": 0.0,
+    "calls": 4,
+    "unpriced_calls": 4
+  },
+  "provider": "nvidia-nim",
+  "run_class": "dev",
+  "models": {
+    "cheap": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "default": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "strong": "nvidia/nemotron-3-ultra-550b-a55b"
+  },
+  "versions": {
+    "pydantic": "2.12.4",
+    "pytest": "9.2.0",
+    "python": "3.13.15"
+  },
+  "split": {
+    "method": "sha256-path",
+    "held_out_fraction": 0.25,
+    "total": 3,
+    "visible": [
+      "tests/test_pricing.py",
+      "tests/test_report.py"
+    ],
+    "held_out": [
+      "tests/test_models.py"
+    ]
+  },
+  "reference_outcome": {
+    "status": "GREEN",
+    "run_id": "run-20261028T041551-30b292",
+    "result": {
+      "exit_code": 0,
+      "passed": 30,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "duration_s": 0.44,
+      "output_tail": [
+        "..............................                                           [100%]",
+        "30 passed in 0.44s"
+      ]
+    },
+    "reasons": [
+      "pytest exit 0: GREEN"
+    ]
+  },
+  "baseline_outcome": {
+    "status": "ENV_FAIL",
+    "run_id": "run-20261028T041616-e45d02",
+    "result": {
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "duration_s": 0.0,
+      "output_tail": [
+        "ImportError while loading conftest '<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\repo\\tests\\conftest.py'.",
+        "tests\\conftest.py:9: in <module>",
+        "    from invoicekit import Customer, Invoice, LineItem",
+        "src\\invoicekit\\__init__.py:3: in <module>",
+        "    from invoicekit.models import MAX_LINE_ITEMS, Customer, Invoice, LineItem",
+        "src\\invoicekit\\models.py:20: in <module>",
+        "    class Customer(BaseModel):",
+        "src\\invoicekit\\models.py:24: in Customer",
+        "    email: str = Field(..., regex=EMAIL_PATTERN)",
+        "                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+        ".upv-venv\\Lib\\site-packages\\pydantic\\fields.py:1322: in Field",
+        "    raise PydanticUserError('`regex` is removed. use `pattern` instead', code='removed-kwargs')",
+        "E   pydantic.errors.PydanticUserError: `regex` is removed. use `pattern` instead",
+        "E",
+        "E   For further information visit https://errors.pydantic.dev/2.12/u/removed-kwargs"
+      ]
+    },
+    "reasons": [
+      "pytest exit 4: ENV_FAIL"
+    ]
+  },
+  "visible_outcome": {
+    "status": "GREEN",
+    "run_id": "run-20261028T041711-706af3",
+    "result": {
+      "exit_code": 0,
+      "passed": 13,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "duration_s": 0.08,
+      "output_tail": [
+        ".............                                                            [100%]",
+        "============================== warnings summary ===============================",
+        "tests/test_report.py::test_summary_payload_exposes_customer_and_items",
+        "tests/test_report.py::test_summary_payload_is_json_serialisable",
+        "  <local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\repo\\src\\invoicekit\\report.py:33: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/",
+        "    payload = invoice.dict()",
+        "",
+        "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+        "13 passed, 2 warnings in 0.08s"
+      ]
+    },
+    "reasons": [
+      "pytest exit 0: GREEN"
+    ]
+  },
+  "heldout_outcome": {
+    "status": "GREEN",
+    "run_id": "run-20261028T041716-bae180",
+    "result": {
+      "exit_code": 0,
+      "passed": 17,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "duration_s": 0.07,
+      "output_tail": [
+        ".................                                                        [100%]",
+        "17 passed in 0.07s"
+      ]
+    },
+    "reasons": [
+      "pytest exit 0: GREEN"
+    ]
+  },
+  "attempts": [
+    {
+      "iteration": 1,
+      "tier": "default",
+      "status": "rolled_back",
+      "detail": "Visible tests did not improve: the run is ENV_FAIL (0 passed, 0 failed, 0 error(s), exit 4), not an improvement on the previous ENV_FAIL (0 passed, 0 failed, 0 error(s)); rolled back 1 file(s)",
+      "edits": [
+        {
+          "path": "src/invoicekit/models.py",
+          "action": "write",
+          "diff": "--- a/src/invoicekit/models.py\n+++ b/src/invoicekit/models.py\n@@ -1,11 +1,3 @@\n-\"\"\"Invoice models for the UpgradePilot demo target.\n-\n-This is an original demo project written for this repository (MIT). It exists\n-so the upgrade pipeline can be exercised end to end on a codebase we own and\n-can talk about freely. It is deliberately pinned to pydantic v1: the upgrade\n-to v2 is the demo, and the project is *not* part of the benchmark.\n-\"\"\"\n-\n from __future__ import annotations\n \n from decimal import Decimal\n@@ -21,7 +13,7 @@\n     \"\"\"The party being invoiced.\"\"\"\n \n     name: str = Field(..., min_length=1, max_length=80)\n-    email: str = Field(..., regex=EMAIL_PATTERN)\n+    email: str = Field(..., pattern=EMAIL_PATTERN)\n \n     class Config:\n         allow_mutation = False\n"
+        }
+      ],
+      "verify_outcome": {
+        "status": "ENV_FAIL",
+        "run_id": "run-20261028T041632-4d8965",
+        "result": {
+          "exit_code": 4,
+          "passed": 0,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "xfailed": 0,
+          "xpassed": 0,
+          "duration_s": 0.0,
+          "output_tail": [
+            "ImportError while loading conftest '<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\repo\\tests\\conftest.py'.",
+            "tests\\conftest.py:9: in <module>",
+            "    from invoicekit import Customer, Invoice, LineItem",
+            "src\\invoicekit\\__init__.py:3: in <module>",
+            "    from invoicekit.models import MAX_LINE_ITEMS, Customer, Invoice, LineItem",
+            "src\\invoicekit\\models.py:39: in <module>",
+            "    class Invoice(BaseModel):",
+            "src\\invoicekit\\models.py:56: in Invoice",
+            "    @root_validator",
+            "     ^^^^^^^^^^^^^^",
+            ".upv-venv\\Lib\\site-packages\\pydantic\\deprecated\\class_validators.py:234: in root_validator",
+            "    return root_validator()(*__args)  # type: ignore",
+            "           ^^^^^^^^^^^^^^^^",
+            ".upv-venv\\Lib\\site-packages\\pydantic\\deprecated\\class_validators.py:240: in root_validator",
+            "    raise PydanticUserError(",
+            "E   pydantic.errors.PydanticUserError: If you use `@root_validator` with pre=False (the default) you MUST specify `skip_on_failure=True`. Note that `@root_validator` is deprecated and should be replaced with `@model_validator`.",
+            "E",
+            "E   For further information visit https://errors.pydantic.dev/2.12/u/root-validator-pre-skip"
+          ]
+        },
+        "reasons": [
+          "pytest exit 4: ENV_FAIL"
+        ]
+      }
+    },
+    {
+      "iteration": 2,
+      "tier": "default",
+      "status": "invalid",
+      "detail": "EditError: Model returned invalid edits JSON: {\n  \"files\": [\n    {\n      \"path\": \"src/invoicekit/models.py\",\n      \"action\": \"write\",\n      \"content\": \"from __future__ import annotations\\n\\nfrom decimal import Decimal\\nfrom typing import Any, Dic; rolled back 0 file(s)",
+      "edits": [],
+      "verify_outcome": null
+    },
+    {
+      "iteration": 3,
+      "tier": "strong",
+      "status": "GREEN",
+      "detail": "",
+      "edits": [
+        {
+          "path": "src/invoicekit/models.py",
+          "action": "write",
+          "diff": "--- a/src/invoicekit/models.py\n+++ b/src/invoicekit/models.py\n@@ -11,7 +11,7 @@\n from decimal import Decimal\n from typing import Any, Dict, List\n \n-from pydantic import BaseModel, Field, root_validator, validator\n+from pydantic import BaseModel, Field, field_validator, model_validator\n \n EMAIL_PATTERN = r\"^[^@\\s]+@[^@\\s]+\\.[A-Za-z]{2,}$\"\n MAX_LINE_ITEMS = 50\n@@ -21,10 +21,9 @@\n     \"\"\"The party being invoiced.\"\"\"\n \n     name: str = Field(..., min_length=1, max_length=80)\n-    email: str = Field(..., regex=EMAIL_PATTERN)\n+    email: str = Field(..., pattern=EMAIL_PATTERN)\n \n-    class Config:\n-        allow_mutation = False\n+    model_config = {\"frozen\": True}\n \n \n class LineItem(BaseModel):\n@@ -34,10 +33,10 @@\n     quantity: int = Field(..., gt=0, le=1000)\n     unit_price: Decimal = Field(..., ge=0)\n \n-    class Config:\n-        allow_mutation = False\n+    model_config = {\"frozen\": True}\n \n-    @validator(\"sku\", pre=True)\n+    @field_validator(\"sku\", mode=\"before\")\n+    @classmethod\n     def _normalise_sku(cls, value: Any) -> Any:\n         if isinstance(value, str):\n             return value.strip().upper()\n@@ -52,25 +51,25 @@\n     line_items: List[LineItem]\n     discount_pct: Decimal = Field(default=Decimal(\"0\"), ge=0, le=100)\n \n-    class Config:\n-        allow_mutation = False\n+    model_config = {\"frozen\": True}\n \n-    @validator(\"currency\", pre=True)\n+    @field_validator(\"currency\", mode=\"before\")\n+    @classmethod\n     def _normalise_currency(cls, value: Any) -> Any:\n         if isinstance(value, str):\n             return value.strip().upper()\n         return value\n \n-    @root_validator\n-    def _check_invoice_shape(cls, values: Dict[str, Any]) -> Dict[str, Any]:\n-        items = values.get(\"line_items\") or []\n+    @model_validator(mode=\"after\")\n+    def _check_invoice_shape(self) -> \"Invoice\":\n+        items = self.line_items\n         if not items:\n             raise ValueError(\"an invoice needs at least one line item\")\n         if len(items) > MAX_LINE_ITEMS:\n             raise ValueError(f\"an invoice supports at most {MAX_LINE_ITEMS} line items\")\n-        return values\n+        return self\n \n     @classmethod\n     def from_payload(cls, payload: Dict[str, Any]) -> \"Invoice\":\n         \"\"\"Build an invoice from a raw mapping (API payload, JSON body, ...).\"\"\"\n-        return cls.parse_obj(payload)\n+        return cls.model_validate(payload)\n"
+        }
+      ],
+      "verify_outcome": {
+        "status": "GREEN",
+        "run_id": "run-20261028T041711-706af3",
+        "result": {
+          "exit_code": 0,
+          "passed": 13,
+          "failed": 0,
+          "errors": 0,
+          "skipped": 0,
+          "xfailed": 0,
+          "xpassed": 0,
+          "duration_s": 0.08,
+          "output_tail": [
+            ".............                                                            [100%]",
+            "============================== warnings summary ===============================",
+            "tests/test_report.py::test_summary_payload_exposes_customer_and_items",
+            "tests/test_report.py::test_summary_payload_is_json_serialisable",
+            "  <local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\repo\\src\\invoicekit\\report.py:33: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/",
+            "    payload = invoice.dict()",
+            "",
+            "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+            "13 passed, 2 warnings in 0.08s"
+          ]
+        },
+        "reasons": [
+          "pytest exit 0: GREEN"
+        ]
+      }
+    }
+  ],
+  "applied_edits": [
+    {
+      "path": "src/invoicekit/models.py",
+      "action": "write",
+      "diff": "--- a/src/invoicekit/models.py\n+++ b/src/invoicekit/models.py\n@@ -11,7 +11,7 @@\n from decimal import Decimal\n from typing import Any, Dict, List\n \n-from pydantic import BaseModel, Field, root_validator, validator\n+from pydantic import BaseModel, Field, field_validator, model_validator\n \n EMAIL_PATTERN = r\"^[^@\\s]+@[^@\\s]+\\.[A-Za-z]{2,}$\"\n MAX_LINE_ITEMS = 50\n@@ -21,10 +21,9 @@\n     \"\"\"The party being invoiced.\"\"\"\n \n     name: str = Field(..., min_length=1, max_length=80)\n-    email: str = Field(..., regex=EMAIL_PATTERN)\n+    email: str = Field(..., pattern=EMAIL_PATTERN)\n \n-    class Config:\n-        allow_mutation = False\n+    model_config = {\"frozen\": True}\n \n \n class LineItem(BaseModel):\n@@ -34,10 +33,10 @@\n     quantity: int = Field(..., gt=0, le=1000)\n     unit_price: Decimal = Field(..., ge=0)\n \n-    class Config:\n-        allow_mutation = False\n+    model_config = {\"frozen\": True}\n \n-    @validator(\"sku\", pre=True)\n+    @field_validator(\"sku\", mode=\"before\")\n+    @classmethod\n     def _normalise_sku(cls, value: Any) -> Any:\n         if isinstance(value, str):\n             return value.strip().upper()\n@@ -52,25 +51,25 @@\n     line_items: List[LineItem]\n     discount_pct: Decimal = Field(default=Decimal(\"0\"), ge=0, le=100)\n \n-    class Config:\n-        allow_mutation = False\n+    model_config = {\"frozen\": True}\n \n-    @validator(\"currency\", pre=True)\n+    @field_validator(\"currency\", mode=\"before\")\n+    @classmethod\n     def _normalise_currency(cls, value: Any) -> Any:\n         if isinstance(value, str):\n             return value.strip().upper()\n         return value\n \n-    @root_validator\n-    def _check_invoice_shape(cls, values: Dict[str, Any]) -> Dict[str, Any]:\n-        items = values.get(\"line_items\") or []\n+    @model_validator(mode=\"after\")\n+    def _check_invoice_shape(self) -> \"Invoice\":\n+        items = self.line_items\n         if not items:\n             raise ValueError(\"an invoice needs at least one line item\")\n         if len(items) > MAX_LINE_ITEMS:\n             raise ValueError(f\"an invoice supports at most {MAX_LINE_ITEMS} line items\")\n-        return values\n+        return self\n \n     @classmethod\n     def from_payload(cls, payload: Dict[str, Any]) -> \"Invoice\":\n         \"\"\"Build an invoice from a raw mapping (API payload, JSON body, ...).\"\"\"\n-        return cls.parse_obj(payload)\n+        return cls.model_validate(payload)\n"
+    }
+  ],
+  "guard_clean": true,
+  "guard_summary": "clean (5 test files unchanged)",
+  "artifacts": [
+    "<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\test_split.json",
+    "<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\guard_baseline.json",
+    "<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\baseline_env_fail.json",
+    "<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\attempts\\attempt_01_rolled_back.json",
+    "<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\attempts\\attempt_02_invalid.json",
+    "<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\attempts\\attempt_03_green.json",
+    "<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\run-20261028T041711-706af3_green.json",
+    "<local-user-path>\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261028T041417-69228f\\run-20261028T041716-bae180_green.json"
+  ]
+}

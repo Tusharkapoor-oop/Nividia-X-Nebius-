@@ -1,0 +1,49 @@
+{
+  "status": "STUCK",
+  "run_id": "run-20261028T040941-2382b2",
+  "result": {
+    "exit_code": 1,
+    "passed": 12,
+    "failed": 33,
+    "errors": 0,
+    "skipped": 1,
+    "xfailed": 1,
+    "xpassed": 0,
+    "duration_s": 0.0,
+    "output_tail": [
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixture_is_value_in_parametrize",
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixture_as_funcarg_in_parametrize_with_indirect",
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixture_is_value_in_parametrize_with_indirect",
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixture_as_param_of_fixture - Ass...",
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixture_in_params_which_has_params",
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixture_three_times_nested - Asse...",
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixture_three_times_nested_with_one_failed",
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixture_common_dependency - Asser...",
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixture_common_dependency_with_getfixturevalue",
+      "FAILED tests/test_lazyfixture.py::test_issues2 - AssertionError: ([], [], [<C...",
+      "FAILED tests/test_lazyfixture.py::test_issues2_2 - AssertionError: ([], [], [...",
+      "FAILED tests/test_lazyfixture.py::test_issues3_autouse_fixtures_should_run_first",
+      "FAILED tests/test_lazyfixture.py::test_issues10_xfail - AssertionError: ([], ...",
+      "FAILED tests/test_lazyfixture.py::test_issues12_skip_test_function - Assertio...",
+      "FAILED tests/test_lazyfixture.py::test_issues12_skip_test_method - AssertionE...",
+      "FAILED tests/test_lazyfixture.py::test_issues12_lf_as_method_of_test_class - ...",
+      "FAILED tests/test_lazyfixture.py::test_argnames_initialized_in_right_order - ...",
+      "FAILED tests/test_lazyfixture.py::test_argnames_initialized_in_right_order2",
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixtures_with_subfixtures - Asser...",
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixtures_in_subfixture - Assertio...",
+      "FAILED tests/test_lazyfixture.py::test_issues23[False] - AssertionError: ([],...",
+      "FAILED tests/test_lazyfixture.py::test_issues23[True] - AssertionError: ([], ...",
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixture_nested_fixtures - Asserti...",
+      "FAILED tests/test_lazyfixture.py::test_usefixture_runs_before_function_fixtures",
+      "FAILED tests/test_lazyfixture.py::test_autouse_and_usefixture_module_scope_runs_before_function_fixtures",
+      "FAILED tests/test_lazyfixture.py::test_session_autouse_and_usefixture_module_scope_runs_before_function_fixtures[session]",
+      "FAILED tests/test_lazyfixture.py::test_session_autouse_and_usefixture_module_scope_runs_before_function_fixtures[module]",
+      "FAILED tests/test_lazyfixture.py::test_module_scope_runs_before_function_fixtures",
+      "FAILED tests/test_lazyfixture.py::test_lazy_fixture_ids - AssertionError: ass...",
+      "= 33 failed, 12 passed, 1 skipped, 1 xfailed, 4 warnings in 77.31s (0:01:17) =="
+    ]
+  },
+  "reasons": [
+    "pytest exit 1: STUCK"
+  ]
+}

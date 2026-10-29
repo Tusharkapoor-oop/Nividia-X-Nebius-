@@ -1,0 +1,92 @@
+{
+  "case_id": "demo-invoicekit-pydantic1-to-2",
+  "strategy": "agent",
+  "status": "GREEN",
+  "status_note": "visible suite and external held-out contract both GREEN",
+  "agent_status": "GREEN",
+  "suite": "13P/0F/0E (exit 0)",
+  "exit_code": 0,
+  "passed": 13,
+  "failed": 0,
+  "errors": 0,
+  "iterations": 3,
+  "llm_calls": 4,
+  "prompt_tokens": 7288,
+  "completion_tokens": 2206,
+  "cost_usd": null,
+  "fully_priced": false,
+  "wall_time_s": 126.44,
+  "recorded_at": "2026-10-28T03:49:59.209Z",
+  "provider": "nvidia-nim",
+  "run_class": "dev",
+  "models": {
+    "cheap": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "default": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "strong": "nvidia/nemotron-3-ultra-550b-a55b"
+  },
+  "versions": {
+    "pydantic": "2.12.4",
+    "pytest": "9.2.0",
+    "python": "3.13.15"
+  },
+  "old_pin": "pydantic==1.10.22",
+  "new_pin": "pydantic==2.12.4",
+  "old_pin_status": "GREEN",
+  "bumped_status": "ENV_FAIL",
+  "reference_status": "GREEN",
+  "guard_clean": true,
+  "guard_summary": "clean (5 test files unchanged)",
+  "edits": [
+    "src/invoicekit/models.py"
+  ],
+  "notes": [
+    "post-bump suite before repair: ENV_FAIL",
+    "baseline_verify: Testing visible suite before agent changes",
+    "triage: Analyzing failure and query",
+    "research: Searching Tavily for 'pydantic 2.12 regex removed use pattern Field'",
+    "patch_attempt_1: Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b",
+    "verify_1: Visible tests did not improve: the run is ENV_FAIL (0 passed, 0 failed, 0 error(s), exit 4), not an improvement on the previous ENV_FAIL (0 passed, 0 failed, 0 error(s)); rolled back 1 file(s)",
+    "patch_attempt_2: Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b",
+    "verify_2: Visible tests did not improve: the run is ENV_FAIL (0 passed, 0 failed, 0 error(s), exit 4), not an improvement on the previous ENV_FAIL (0 passed, 0 failed, 0 error(s)); rolled back 1 file(s)",
+    "patch_attempt_3: Generating patch using nvidia/nemotron-3-ultra-550b-a55b",
+    "certify_heldout: Verifying 1 held-out tests"
+  ],
+  "heldout_old_pin": {
+    "label": "old-pin",
+    "status": "GREEN",
+    "exit_code": 0,
+    "passed": 11,
+    "failed": 0,
+    "errors": 0,
+    "output_tail": [
+      "...........                                                              [100%]",
+      "11 passed in 0.15s"
+    ],
+    "command": "pytest C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\agent\\heldout_old-pin  (cwd=C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\agent\\repo)"
+  },
+  "heldout_after": {
+    "label": "after",
+    "status": "GREEN",
+    "exit_code": 0,
+    "passed": 11,
+    "failed": 0,
+    "errors": 0,
+    "output_tail": [
+      "...........                                                              [100%]",
+      "============================== warnings summary ===============================",
+      "test_heldout_contract.py::test_summary_payload_serialises_totals_as_strings",
+      "  C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\agent\\repo\\src\\invoicekit\\report.py:33: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/",
+      "    payload = invoice.dict()",
+      "",
+      "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+      "11 passed, 1 warning in 0.26s"
+    ],
+    "command": "pytest C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\agent\\heldout_after  (cwd=C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\agent\\repo)"
+  },
+  "artifacts": [
+    "artifacts/demo/demo-invoicekit-pydantic1-to-2/agent/run-20261028T035103-a4f4be_green.json",
+    "artifacts/demo/demo-invoicekit-pydantic1-to-2/agent/run-20261028T035117-6fa934_env_fail.json",
+    "artifacts/demo/demo-invoicekit-pydantic1-to-2/agent/demo-invoicekit-pydantic1-to-2--agent",
+    "artifacts/demo/demo-invoicekit-pydantic1-to-2/agent/events.jsonl"
+  ]
+}

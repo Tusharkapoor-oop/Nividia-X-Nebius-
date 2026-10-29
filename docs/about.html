@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About - UpgradePilot recorded runs</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site">
+  <div class="wrap">
+    <h1>UpgradePilot recorded runs</h1>
+    <nav aria-label="Site">
+      <ul>
+        <li><a href="./index.html">Runs</a></li>
+        <li><a href="./comparison.html">Comparison</a></li>
+        <li><a href="./about.html">About this site</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<h1>About this site</h1>
+<p class="lead">A static rendering of the run evidence committed in this repository. There is no
+server, no database, and no JavaScript: <code>upgradepilot site build</code> reads the artifact
+JSON files and writes these pages.</p>
+<h2>What a recorded run is</h2>
+<p>Each page corresponds to one result file: an agent upgrade report
+(<code>artifacts/runs/</code>), a Phase 5 strategy result
+(<code>artifacts/phase5/</code>), or a demo-case result
+(<code>artifacts/demo/</code>). Statuses, counts, tokens, and timestamps are copied from those
+files; the timestamp comes from the run id or the result file itself and the page says which.</p>
+<h2>Providers</h2>
+<p>Recorded providers on this build: <strong>NVIDIA NIM</strong>.
+Runs are labelled with the provider that produced them. An NVIDIA NIM run is a development run
+and is never presented as a Nebius Token Factory run.</p>
+<h2>Run it locally</h2>
+<pre class="proof">git clone &lt;repository&gt;
+cd upgradepilot
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install -e ".[web,dev]"
+copy .env.example .env   # add keys
+upgradepilot doctor
+upgradepilot upgrade &lt;repo&gt; --package &lt;name&gt; --to &lt;version&gt;</pre>
+<h2>Honest limits</h2>
+<ul>
+<li>The hosted site shows <strong>recorded runs</strong>, not a live service.</li>
+<li>An empty table means no result file exists; it never means "nothing failed".</li>
+<li>Unreadable artifact files are listed on the home page rather than hidden.</li>
+</ul>
+
+</main>
+<footer class="site"><div class="wrap">Static site generated from artifact JSON files. Every value on these pages was read from a file in the repository.</div></footer>
+</body>
+</html>

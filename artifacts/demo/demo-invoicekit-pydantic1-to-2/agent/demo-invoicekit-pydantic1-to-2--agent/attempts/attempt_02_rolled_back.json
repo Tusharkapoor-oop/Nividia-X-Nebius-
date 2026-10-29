@@ -1,0 +1,43 @@
+{
+  "iteration": 2,
+  "tier": "default",
+  "status": "rolled_back",
+  "detail": "Visible tests did not improve: the run is ENV_FAIL (0 passed, 0 failed, 0 error(s), exit 4), not an improvement on the previous ENV_FAIL (0 passed, 0 failed, 0 error(s)); rolled back 1 file(s)",
+  "edits": [
+    {
+      "path": "src/invoicekit/models.py",
+      "action": "write",
+      "diff": "--- a/src/invoicekit/models.py\n+++ b/src/invoicekit/models.py\n@@ -1,17 +1,9 @@\n-\"\"\"Invoice models for the UpgradePilot demo target.\n-\n-This is an original demo project written for this repository (MIT). It exists\n-so the upgrade pipeline can be exercised end to end on a codebase we own and\n-can talk about freely. It is deliberately pinned to pydantic v1: the upgrade\n-to v2 is the demo, and the project is *not* part of the benchmark.\n-\"\"\"\n-\n from __future__ import annotations\n \n from decimal import Decimal\n from typing import Any, Dict, List\n \n-from pydantic import BaseModel, Field, root_validator, validator\n+from pydantic import BaseModel, Field\n \n EMAIL_PATTERN = r\"^[^@\\s]+@[^@\\s]+\\.[A-Za-z]{2,}$\"\n MAX_LINE_ITEMS = 50\n@@ -21,10 +13,10 @@\n     \"\"\"The party being invoiced.\"\"\"\n \n     name: str = Field(..., min_length=1, max_length=80)\n-    email: str = Field(..., regex=EMAIL_PATTERN)\n+    email: str = Field(..., pattern=EMAIL_PATTERN)\n \n     class Config:\n-        allow_mutation = False\n+        frozen = True\n \n \n class LineItem(BaseModel):\n@@ -35,7 +27,7 @@\n     unit_price: Decimal = Field(..., ge=0)\n \n     class Config:\n-        allow_mutation = False\n+        frozen = True\n \n     @validator(\"sku\", pre=True)\n     def _normalise_sku(cls, value: Any) -> Any:\n@@ -53,7 +45,7 @@\n     discount_pct: Decimal = Field(default=Decimal(\"0\"), ge=0, le=100)\n \n     class Config:\n-        allow_mutation = False\n+        frozen = True\n \n     @validator(\"currency\", pre=True)\n     def _normalise_currency(cls, value: Any) -> Any:\n@@ -61,16 +53,15 @@\n             return value.strip().upper()\n         return value\n \n-    @root_validator\n-    def _check_invoice_shape(cls, values: Dict[str, Any]) -> Dict[str, Any]:\n-        items = values.get(\"line_items\") or []\n-        if not items:\n+    @model_validator(mode=\"after\")\n+    def _check_invoice_shape(self) -> \"Invoice\":\n+        if not self.line_items:\n             raise ValueError(\"an invoice needs at least one line item\")\n-        if len(items) > MAX_LINE_ITEMS:\n+        if len(self.line_items) > MAX_LINE_ITEMS:\n             raise ValueError(f\"an invoice supports at most {MAX_LINE_ITEMS} line items\")\n-        return values\n+        return self\n \n     @classmethod\n     def from_payload(cls, payload: Dict[str, Any]) -> \"Invoice\":\n         \"\"\"Build an invoice from a raw mapping (API payload, JSON body, ...).\"\"\"\n-        return cls.parse_obj(payload)\n+        return cls.model_validate(payload)\n"
+    }
+  ],
+  "verify_outcome": {
+    "status": "ENV_FAIL",
+    "run_id": "run-20261028T035144-2bb31c",
+    "result": {
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "duration_s": 0.0,
+      "output_tail": [
+        "ImportError while loading conftest 'C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\agent\\repo\\tests\\conftest.py'.",
+        "tests\\conftest.py:9: in <module>",
+        "    from invoicekit import Customer, Invoice, LineItem",
+        "src\\invoicekit\\__init__.py:3: in <module>",
+        "    from invoicekit.models import MAX_LINE_ITEMS, Customer, Invoice, LineItem",
+        "src\\invoicekit\\models.py:22: in <module>",
+        "    class LineItem(BaseModel):",
+        "src\\invoicekit\\models.py:32: in LineItem",
+        "    @validator(\"sku\", pre=True)",
+        "     ^^^^^^^^^",
+        "E   NameError: name 'validator' is not defined"
+      ]
+    },
+    "reasons": [
+      "pytest exit 4: ENV_FAIL"
+    ]
+  }
+}

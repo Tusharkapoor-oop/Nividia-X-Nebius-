@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UpgradePilot — dependency upgrade runs</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <h1>UpgradePilot</h1>
+    <p class="tagline">Trustworthy dependency upgrades: patch, verify, and prove it.</p>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="start-h" class="panel">
+      <h2 id="start-h">Start an upgrade run</h2>
+      <p class="hint">
+        The target repository is copied to a disposable checkout and never
+        modified in place. Only one run executes at a time.
+      </p>
+      <form id="run-form" novalidate>
+        <div class="field">
+          <label for="repo">Repository path</label>
+          <input id="repo" name="repo" type="text" required
+                 autocomplete="off" spellcheck="false"
+                 aria-describedby="repo-hint">
+          <p id="repo-hint" class="hint">Absolute path to the project to upgrade.</p>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="package">Package</label>
+            <input id="package" name="package" type="text" required
+                   autocomplete="off" spellcheck="false" placeholder="pydantic">
+          </div>
+          <div class="field">
+            <label for="to-version">Target version</label>
+            <input id="to-version" name="to_version" type="text" required
+                   autocomplete="off" spellcheck="false" placeholder="2.9.0">
+          </div>
+          <div class="field">
+            <label for="max-iterations">Max iterations</label>
+            <input id="max-iterations" name="max_iterations" type="number"
+                   min="1" max="20" step="1" value="5" inputmode="numeric">
+          </div>
+        </div>
+        <button type="submit" id="start-button">Start run</button>
+        <p id="start-status" class="status" role="alert" aria-live="assertive"></p>
+      </form>
+    </section>
+
+    <section aria-labelledby="runs-h" class="panel">
+      <h2 id="runs-h">Runs</h2>
+      <p id="runs-status" class="status" role="status" aria-live="polite"></p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Runs table">
+        <table id="runs-table">
+          <caption>All recorded upgrade runs, newest first.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Run</th>
+              <th scope="col">Status</th>
+              <th scope="col">Upgrade</th>
+              <th scope="col">Iterations</th>
+              <th scope="col">Guard</th>
+              <th scope="col"><span class="visually-hidden">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody id="runs-body"></tbody>
+        </table>
+      </div>
+      <p id="runs-empty" class="hint">No runs recorded yet.</p>
+    </section>
+
+    <section aria-labelledby="detail-h" class="panel" id="run-detail" hidden>
+      <h2 id="detail-h" tabindex="-1">Run detail</h2>
+      <p id="detail-status" class="status" role="status" aria-live="polite"></p>
+      <p id="detail-request" class="hint"></p>
+
+      <h3>Live events</h3>
+      <ol id="event-log" class="event-log" aria-live="polite"
+          aria-relevant="additions"></ol>
+
+      <h3>Proof card</h3>
+      <pre id="proof-card" class="proof" tabindex="0">Not written yet.</pre>
+    </section>
+
+    <section aria-labelledby="bench-h" class="panel">
+      <h2 id="bench-h">Benchmark results</h2>
+      <p id="bench-status" class="status" role="status" aria-live="polite"></p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Benchmark results table">
+        <table id="bench-table" hidden>
+          <caption>Benchmark cases verified from raw run artifacts.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Case</th>
+              <th scope="col">Baseline</th>
+              <th scope="col">After bump</th>
+              <th scope="col">Passed (pre)</th>
+              <th scope="col">Failed / errors (post)</th>
+              <th scope="col">Duration (post)</th>
+            </tr>
+          </thead>
+          <tbody id="bench-body"></tbody>
+        </table>
+      </div>
+      <p id="bench-empty" class="hint">No benchmark artifacts found.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>UpgradePilot serves evidence from recorded artifacts only — every status
+      shown here is backed by a stored run.</p>
+  </footer>
+</body>
+</html>

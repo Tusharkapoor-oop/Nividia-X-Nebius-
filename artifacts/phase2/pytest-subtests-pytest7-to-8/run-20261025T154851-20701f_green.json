@@ -1,0 +1,36 @@
+{
+  "status": "GREEN",
+  "run_id": "run-20261025T154851-20701f",
+  "result": {
+    "exit_code": 0,
+    "passed": 27,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 7,
+    "xfailed": 7,
+    "xpassed": 0,
+    "duration_s": 4.38,
+    "output_tail": [
+      ".s.s.s.s.s....s..s.xxxxx...x..x..........                                [100%]",
+      "=========================== short test summary info ===========================",
+      "SKIPPED [1] tests\\test_subtests.py:40: could not import 'xdist': No module named 'xdist'",
+      "SKIPPED [1] tests\\test_subtests.py:70: could not import 'xdist': No module named 'xdist'",
+      "SKIPPED [1] tests\\test_subtests.py:107: could not import 'xdist': No module named 'xdist'",
+      "SKIPPED [1] tests\\test_subtests.py:131: could not import 'xdist': No module named 'xdist'",
+      "SKIPPED [1] tests\\test_subtests.py:153: could not import 'xdist': No module named 'xdist'",
+      "SKIPPED [1] tests\\test_subtests.py:265: could not import 'xdist': No module named 'xdist'",
+      "SKIPPED [1] tests\\test_subtests.py:311: could not import 'xdist': No module named 'xdist'",
+      "XFAIL tests/test_subtests.py::TestSubTest::test_skip[pytest-normal] - Not producing the expected results (#5)",
+      "XFAIL tests/test_subtests.py::TestSubTest::test_skip[pytest-xdist] - Not producing the expected results (#5)",
+      "XFAIL tests/test_subtests.py::TestSubTest::test_xfail[unittest] - Not producing the expected results (#5)",
+      "XFAIL tests/test_subtests.py::TestSubTest::test_xfail[pytest-normal] - Not producing the expected results (#5)",
+      "XFAIL tests/test_subtests.py::TestSubTest::test_xfail[pytest-xdist] - Not producing the expected results (#5)",
+      "XFAIL tests/test_subtests.py::TestSubTest::test_skip_with_failure[pytest-xdist] - Not producing the expected results (#5)",
+      "XFAIL tests/test_subtests.py::TestSubTest::test_skip_with_failure_and_non_subskip[pytest-xdist] - Not producing the expected results (#5)",
+      "27 passed, 7 skipped, 7 xfailed in 4.38s"
+    ]
+  },
+  "reasons": [
+    "pytest exit 0: GREEN"
+  ]
+}

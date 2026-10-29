@@ -1,0 +1,31 @@
+{
+  "label": "after",
+  "status": "ENV_FAIL",
+  "exit_code": 2,
+  "passed": 0,
+  "failed": 0,
+  "errors": 1,
+  "output_tail": [
+    "=================================== ERRORS ====================================",
+    "__________________ ERROR collecting test_heldout_contract.py __________________",
+    "..\\heldout_after\\test_heldout_contract.py:27: in <module>",
+    "    from invoicekit import (",
+    "src\\invoicekit\\__init__.py:3: in <module>",
+    "    from invoicekit.models import MAX_LINE_ITEMS, Customer, Invoice, LineItem",
+    "src\\invoicekit\\models.py:20: in <module>",
+    "    class Customer(BaseModel):",
+    "src\\invoicekit\\models.py:24: in Customer",
+    "    email: str = Field(..., regex=EMAIL_PATTERN)",
+    "                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+    ".upv-venv\\Lib\\site-packages\\pydantic\\fields.py:1322: in Field",
+    "    raise PydanticUserError('`regex` is removed. use `pattern` instead', code='removed-kwargs')",
+    "E   pydantic.errors.PydanticUserError: `regex` is removed. use `pattern` instead",
+    "E   ",
+    "E   For further information visit https://errors.pydantic.dev/2.12/u/removed-kwargs",
+    "=========================== short test summary info ===========================",
+    "ERROR test_heldout_contract.py - pydantic.errors.PydanticUserError: `regex` i...",
+    "!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+    "1 error in 0.41s"
+  ],
+  "command": "pytest C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\agent\\heldout_after  (cwd=C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\agent\\repo)"
+}

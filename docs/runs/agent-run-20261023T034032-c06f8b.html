@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>agent: pytest -&gt; 8.4.1 - UpgradePilot recorded runs</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site">
+  <div class="wrap">
+    <h1>UpgradePilot recorded runs</h1>
+    <nav aria-label="Site">
+      <ul>
+        <li><a href="../index.html">Runs</a></li>
+        <li><a href="../comparison.html">Comparison</a></li>
+        <li><a href="../about.html">About this site</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<p><a href="../index.html">Back to all runs</a></p><h1>agent: pytest -&gt; 8.4.1</h1>
+<p><span class="badge warn">STUCK</span> <span class="badge warn">Recorded run</span></p>
+<div class="card"><h2>Summary</h2><dl class="meta"><dt>Status</dt><dd>STUCK</dd><dt>Provider</dt><dd>provider not recorded</dd><dt>Run class</dt><dd>dev</dd><dt>Recorded at</dt><dd>2026-10-23T03:40:32Z (run id (UTC))</dd><dt>Visible suite</dt><dd>STUCK: 12 passed, 33 failed, 0 error(s), exit 1</dd><dt>Guard</dt><dd>clean</dd><dt>Cost</dt><dd>unpriced (6 call(s))</dd><dt>Tokens</dt><dd>17413 in / 8999 out, 6 call(s)</dd><dt>Evidence file</dt><dd>runs/run-20261023T034032-c06f8b/upgrade_report.json</dd><dt>Target repo</dt><dd>&lt;local-user-path&gt;\Downloads\Nividia X nebius\upgradepilot\bench\workdirs\cases\pytest-lazy-fixture</dd><dt>Iterations</dt><dd>5</dd><dt>Old-pin reference</dt><dd>not run</dd><dt>Baseline (after bump)</dt><dd>not run</dd><dt>Held-out suite</dt><dd>not run</dd><dt>Test split</dt><dd>1 visible, 0 held-out</dd><dt>Guard</dt><dd>clean</dd></dl></div>
+<section aria-labelledby="timeline"><h2 id="timeline">Timeline</h2><ol class="timeline"><li><span class="step">guard_snapshot</span> <span class="badge warn">ok</span><div class="detail">Hashed 4 test-surface files</div></li><li><span class="step">heldout_split</span> <span class="badge warn">ok</span><div class="detail">1 visible, 0 held-out</div></li><li><span class="step">baseline_verify</span> <span class="badge warn">start</span><div class="detail">Testing visible suite before agent changes</div></li><li><span class="step">baseline_verify</span> <span class="badge warn">ok</span><div class="detail">Breakage confirmed: ENV_FAIL</div></li><li><span class="step">triage</span> <span class="badge warn">start</span> <span class="badge warn">cheap</span><div class="detail">Analyzing failure and query</div></li><li><span class="step">triage</span> <span class="badge warn">ok</span> <span class="badge warn">cheap</span><div class="detail">Query: &#x27;pytest CallSpec2 funcargs attribute removed 8.4 migration guide&#x27;; Candidates: 1</div></li><li><span class="step">research</span> <span class="badge warn">start</span><div class="detail">Searching Tavily for &#x27;pytest CallSpec2 funcargs attribute removed 8.4 migration guide&#x27;</div></li><li><span class="step">research</span> <span class="badge warn">ok</span><div class="detail">Retrieved 3290 chars of context</div></li><li><span class="step">patch_attempt_1</span> <span class="badge warn">start</span> <span class="badge warn">default</span><div class="detail">Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b</div></li><li><span class="step">guard_check_1</span> <span class="badge warn">ok</span><div class="detail">clean (4 test files unchanged)</div></li><li><span class="step">verify_1</span> <span class="badge warn">failed</span><div class="detail">Visible tests exit 2 (ENV_FAIL); rolled back 1 file(s)</div></li><li><span class="step">patch_attempt_2</span> <span class="badge warn">start</span> <span class="badge warn">default</span><div class="detail">Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b</div></li><li><span class="step">guard_check_2</span> <span class="badge warn">ok</span><div class="detail">clean (4 test files unchanged)</div></li><li><span class="step">verify_2</span> <span class="badge warn">failed</span><div class="detail">Visible tests exit 1 (STUCK); rolled back 1 file(s)</div></li><li><span class="step">patch_attempt_3</span> <span class="badge warn">start</span> <span class="badge warn">strong</span><div class="detail">Generating patch using nvidia/nemotron-3-ultra-550b-a55b</div></li><li><span class="step">guard_check_3</span> <span class="badge warn">ok</span><div class="detail">clean (4 test files unchanged)</div></li><li><span class="step">verify_3</span> <span class="badge warn">failed</span><div class="detail">Visible tests exit 1 (STUCK); rolled back 1 file(s)</div></li><li><span class="step">patch_attempt_4</span> <span class="badge warn">start</span> <span class="badge warn">strong</span><div class="detail">Generating patch using nvidia/nemotron-3-ultra-550b-a55b</div></li><li><span class="step">guard_check_4</span> <span class="badge warn">ok</span><div class="detail">clean (4 test files unchanged)</div></li><li><span class="step">verify_4</span> <span class="badge warn">failed</span><div class="detail">Visible tests exit 1 (STUCK); rolled back 1 file(s)</div></li><li><span class="step">patch_attempt_5</span> <span class="badge warn">start</span> <span class="badge warn">strong</span><div class="detail">Generating patch using nvidia/nemotron-3-ultra-550b-a55b</div></li><li><span class="step">guard_check_5</span> <span class="badge warn">ok</span><div class="detail">clean (4 test files unchanged)</div></li><li><span class="step">verify_5</span> <span class="badge warn">failed</span><div class="detail">Visible tests exit 1 (STUCK); rolled back 1 file(s)</div></li><li><span class="step">certify</span> <span class="badge warn">failed</span><div class="detail">Final verdict: STUCK</div></li></ol></section>
+<section aria-labelledby="proof"><h2 id="proof">Proof card</h2><pre class="proof"># UpgradePilot Proof Card: `pytest -&gt; 8.4.1`
+
+- **Run ID:** `run-20261023T034032-c06f8b`
+- **Target Repo:** `&lt;local-user-path&gt;\Downloads\Nividia X nebius\upgradepilot\bench\workdirs\cases\pytest-lazy-fixture`
+- **Final Verdict:** **`STUCK`**
+- **Iterations:** 5
+- **Cost:** Unpriced (6 of 6 calls; provider publishes no catalog price)
+- **Tokens:** 17413 prompt + 8999 completion = 26412 total
+- **Guard:** clean (clean (4 test files unchanged))
+- **Test Suite Partition:** 1 visible, 0 held-out
+
+## Execution Steps
+
+| Step | Status | Tier | Detail |
+|---|---|---|---|
+| guard_snapshot | `ok` | - | Hashed 4 test-surface files |
+| heldout_split | `ok` | - | 1 visible, 0 held-out |
+| baseline_verify | `start` | - | Testing visible suite before agent changes |
+| baseline_verify | `ok` | - | Breakage confirmed: ENV_FAIL |
+| triage | `start` | cheap | Analyzing failure and query |
+| triage | `ok` | cheap | Query: &#x27;pytest CallSpec2 funcargs attribute removed 8.4 migration guide&#x27;; Candidates: 1 |
+| research | `start` | - | Searching Tavily for &#x27;pytest CallSpec2 funcargs attribute removed 8.4 migration guide&#x27; |
+| research | `ok` | - | Retrieved 3290 chars of context |
+| patch_attempt_1 | `start` | default | Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b |
+| guard_check_1 | `ok` | - | clean (4 test files unchanged) |
+| verify_1 | `failed` | - | Visible tests exit 2 (ENV_FAIL); rolled back 1 file(s) |
+| patch_attempt_2 | `start` | default | Generating patch using nvidia/nemotron-3.5-lightning-30b-a3b |
+| guard_check_2 | `ok` | - | clean (4 test files unchanged) |
+| verify_2 | `failed` | - | Visible tests exit 1 (STUCK); rolled back 1 file(s) |
+| patch_attempt_3 | `start` | strong | Generating patch using nvidia/nemotron-3-ultra-550b-a55b |
+| guard_check_3 | `ok` | - | clean (4 test files unchanged) |
+| verify_3 | `failed` | - | Visible tests exit 1 (STUCK); rolled back 1 file(s) |
+| patch_attempt_4 | `start` | strong | Generating patch using nvidia/nemotron-3-ultra-550b-a55b |
+| guard_check_4 | `ok` | - | clean (4 test files unchanged) |
+| verify_4 | `failed` | - | Visible tests exit 1 (STUCK); rolled back 1 file(s) |
+| patch_attempt_5 | `start` | strong | Generating patch using nvidia/nemotron-3-ultra-550b-a55b |
+| guard_check_5 | `ok` | - | clean (4 test files unchanged) |
+| verify_5 | `failed` | - | Visible tests exit 1 (STUCK); rolled back 1 file(s) |
+| certify | `failed` | - | Final verdict: STUCK |
+
+## Verification Results
+
+- **Visible Tests:** `STUCK` (exit 1, 12 passed, 33 failed in 0.00s)
+
+## Applied Patches
+
+_No changes applied._
+</pre></section>
+<p><a href="../data/agent-run-20261023T034032-c06f8b/artifact.json">Raw JSON evidence</a></p>
+</main>
+<footer class="site"><div class="wrap">Static site generated from artifact JSON files. Every value on these pages was read from a file in the repository.</div></footer>
+</body>
+</html>

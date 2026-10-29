@@ -1,0 +1,18 @@
+python: C:\Users\ACER\Downloads\Nividia X nebius\upgradepilot\.venv\Scripts\python.exe
+pytest target version: 8.4.1
+
+resolved: pytest 8.4.1
+
+pytest-asyncio==0.22.0: LOADS (exit 0)
+pytest-asyncio==0.21.1: LOADS (exit 0)
+pytest-mock==3.11.1: LOADS (exit 0)
+pytest-html==4.1.0: LOADS (exit 0)
+pytest-order==1.1.0: LOADS (exit 0)
+pytest-timeout==2.1.0: LOADS (exit 0)
+pytest-sugar==0.9.7: LOADS (exit 0)
+pytest-randomly==3.13.0: LOADS (exit 0)
+pytest-rerunfailures==11.1.2: LOADS (exit 0)
+pytest-xdist==3.3.1: LOADS (exit 0)
+pytest-subtests==0.11.0: LOADS (exit 0)
+
+summary: 0/11 pre-pytest-8 releases fail under pytest 8.4.1

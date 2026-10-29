@@ -1,0 +1,25 @@
+{
+  "status": "ENV_FAIL",
+  "run_id": "run-20261020T061847",
+  "result": {
+    "exit_code": 4,
+    "passed": 0,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "duration_s": 0.0,
+    "output_tail": [
+      "C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\cases\\pytest-lazy-fixture\\.upv-venv\\Lib\\site-packages\\_pytest\\config\\__init__.py:331: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.",
+      "Plugin: helpconfig, Hook: pytest_cmdline_parse",
+      "UsageError: C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\pyproject.toml: 'minversion' requires pytest-8.0, actual pytest-7.4.4'",
+      "For more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning",
+      "  config = pluginmanager.hook.pytest_cmdline_parse(",
+      "ERROR: C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\pyproject.toml: 'minversion' requires pytest-8.0, actual pytest-7.4.4'"
+    ]
+  },
+  "reasons": [
+    "pytest exit 4: ENV_FAIL"
+  ]
+}

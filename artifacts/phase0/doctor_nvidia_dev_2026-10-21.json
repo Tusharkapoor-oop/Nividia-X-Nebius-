@@ -1,0 +1,41 @@
+{
+  "version": "0.1.0",
+  "checks": [
+    {
+      "check": "python>=3.11",
+      "ok": true,
+      "detail": "3.13.15"
+    },
+    {
+      "check": "git",
+      "ok": true,
+      "detail": "git version 2.55.0.windows.5"
+    },
+    {
+      "check": "keys",
+      "ok": true,
+      "detail": "provider=nvidia-nim NVIDIA_API_KEY=nvap... TAVILY=tvly..."
+    },
+    {
+      "check": "hackathon mode",
+      "ok": true,
+      "detail": "DEV (nvidia-nim): submission requires LLM_PROVIDER=tokenfactory and a real Nebius Token Factory call"
+    },
+    {
+      "check": "tier mapping",
+      "ok": true,
+      "detail": "cheap: nvidia/nemotron-3.5-lightning-30b-a3b unpriced (provider publishes no catalog); default: nvidia/nemotron-3.5-lightning-30b-a3b unpriced (provider publishes no catalog); strong: nvidia/nemotron-3-ultra-550b-a55b unpriced (provider publishes no catalog); cap=requests/12"
+    },
+    {
+      "check": "llm chat",
+      "ok": true,
+      "detail": "nvidia/nemotron-3.5-lightning-30b-a3b in=21 out=2 finish='stop' content='OK' (unpriced provider; cost not reported)"
+    },
+    {
+      "check": "tavily search",
+      "ok": true,
+      "detail": "1 result(s), credits=1"
+    }
+  ],
+  "pass": true
+}

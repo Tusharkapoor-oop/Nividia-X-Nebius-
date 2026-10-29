@@ -1,0 +1,339 @@
+﻿[
+    {
+        "type":  "image2text",
+        "name":  "Nemotron 3.5 Super VL",
+        "created_at":  1791841710,
+        "status":  "active",
+        "description":  "NVIDIA\u0027s multimodal model for visual understanding, coding, reasoning, and tool use. It processes text, images, and video to generate text responses.",
+        "vendor":  "nvidia",
+        "tags":  [
+
+                 ],
+        "use_cases":  [
+                          "dedicated-endpoint",
+                          "text",
+                          "image",
+                          "video",
+                          "code",
+                          "function_calling",
+                          "reasoning",
+                          "responses_api",
+                          "context_and_rag",
+                          "image2text"
+                      ],
+        "policy_url":  "https://openmdw.ai/license/1-1/",
+        "license":  {
+                        "url":  "https://openmdw.ai/license/1-1/",
+                        "name":  "OpenMDW-1.1",
+                        "type":  ""
+                    },
+        "size_b":  0,
+        "quality":  0,
+        "flavors":  [
+                        {
+                            "model_id":  "nvidia/Nemotron-3.5-Super-VL",
+                            "model_type":  "image2text",
+                            "model_name":  "Nemotron 3.5 Super VL",
+                            "model_description":  "NVIDIA\u0027s multimodal model for visual understanding, coding, reasoning, and tool use. It processes text, images, and video to generate text responses.",
+                            "label":  "cheap",
+                            "regions":  [
+                                            {
+                                                "country_code":  "US",
+                                                "name":  "us-north1"
+                                            }
+                                        ],
+                            "external_provider":  false,
+                            "tags":  [
+
+                                     ],
+                            "use_cases":  [
+                                              "dedicated-endpoint",
+                                              "text",
+                                              "image",
+                                              "video",
+                                              "code",
+                                              "function_calling",
+                                              "reasoning",
+                                              "responses_api",
+                                              "context_and_rag",
+                                              "image2text"
+                                          ],
+                            "context_window_k":  1024,
+                            "max_model_len":  1048576,
+                            "tokens_per_second":  282.4,
+                            "input_price_per_million_tokens":  0.3,
+                            "output_price_per_million_tokens":  0.9,
+                            "quantization":  "bf16"
+                        }
+                    ],
+        "context_window_k":  1024
+    },
+    {
+        "type":  "text2text",
+        "name":  "Nemotron-3-Nano-30B-A3B",
+        "created_at":  "2025-02-01T00:00:00.000Z",
+        "status":  "active",
+        "logo_url":  "",
+        "huggingface_url":  "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8",
+        "description":  "Compact MoE model optimized for efficient reasoning, chat, and coding with strong multilingual support and long-context RAG/agent workflows.",
+        "vendor":  "nvidia",
+        "tags":  [
+                     "262K context"
+                 ],
+        "use_cases":  [
+                          "text",
+                          "reasoning",
+                          "function_calling",
+                          "code",
+                          "context_and_rag",
+                          "responses_api"
+                      ],
+        "license":  {
+                        "url":  "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+                        "name":  "nvidia-open-model-license",
+                        "type":  ""
+                    },
+        "size_b":  30,
+        "quality":  0,
+        "flavors":  [
+                        {
+                            "model_id":  "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+                            "model_type":  "text2text",
+                            "model_name":  "Nemotron-3-Nano-30B-A3B",
+                            "model_description":  "Compact MoE model optimized for efficient reasoning, chat, and coding with strong multilingual support and long-context RAG/agent workflows.",
+                            "label":  "cheap",
+                            "regions":  [
+                                            {
+                                                "country_code":  "FI",
+                                                "name":  "eu-north1"
+                                            }
+                                        ],
+                            "external_provider":  false,
+                            "tags":  [
+                                         "262K context"
+                                     ],
+                            "use_cases":  [
+                                              "text",
+                                              "reasoning",
+                                              "function_calling",
+                                              "code",
+                                              "context_and_rag",
+                                              "responses_api"
+                                          ],
+                            "context_window_k":  262,
+                            "max_model_len":  262144,
+                            "tokens_per_second":  60,
+                            "input_price_per_million_tokens":  0.06,
+                            "output_price_per_million_tokens":  0.24,
+                            "quantization":  "fp8"
+                        }
+                    ],
+        "context_window_k":  262
+    },
+    {
+        "type":  "text2text",
+        "name":  "Nemotron-3-Super-120b-a12b",
+        "created_at":  1773187200,
+        "status":  "active",
+        "huggingface_url":  "https://huggingface.co/nvidia/Nemotron-3-Super-120B",
+        "description":  "Nemotron 3 Super is a 120B hybrid MoE model optimized for efficient multi-agent AI and complex reasoning tasks.",
+        "vendor":  "nvidia",
+        "tags":  [
+
+                 ],
+        "use_cases":  [
+                          "dedicated-endpoint",
+                          "text",
+                          "summarization",
+                          "context_and_rag",
+                          "code",
+                          "reasoning",
+                          "function_calling",
+                          "complex_writing",
+                          "responses_api"
+                      ],
+        "policy_url":  "https://llama.meta.com/llama3_1/use-policy/",
+        "license":  {
+                        "url":  "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+                        "name":  "nvidia-open-model-license",
+                        "type":  ""
+                    },
+        "size_b":  0,
+        "quality":  0,
+        "flavors":  [
+                        {
+                            "model_id":  "nvidia/nemotron-3-super-120b-a12b",
+                            "model_type":  "text2text",
+                            "model_name":  "Nemotron-3-Super-120b-a12b",
+                            "model_description":  "Nemotron 3 Super is a 120B hybrid MoE model optimized for efficient multi-agent AI and complex reasoning tasks.",
+                            "label":  "cheap",
+                            "regions":  [
+                                            {
+                                                "country_code":  "US",
+                                                "name":  "us-central1"
+                                            }
+                                        ],
+                            "external_provider":  false,
+                            "tags":  [
+
+                                     ],
+                            "use_cases":  [
+                                              "dedicated-endpoint",
+                                              "text",
+                                              "summarization",
+                                              "context_and_rag",
+                                              "code",
+                                              "reasoning",
+                                              "function_calling",
+                                              "complex_writing",
+                                              "responses_api"
+                                          ],
+                            "context_window_k":  256,
+                            "max_model_len":  262144,
+                            "tokens_per_second":  127,
+                            "input_price_per_million_tokens":  0.3,
+                            "output_price_per_million_tokens":  0.9,
+                            "quantization":  "fp4"
+                        }
+                    ],
+        "context_window_k":  256
+    },
+    {
+        "type":  "text2text",
+        "name":  "Nemotron-3-Ultra-550b-a55b",
+        "created_at":  1780531200,
+        "status":  "active",
+        "huggingface_url":  "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-NVFP4",
+        "description":  "Nemotron 3 Ultra is a 550B hybrid MoE model from NVIDIA, optimized for the most demanding multi-agent AI and complex reasoning tasks.",
+        "vendor":  "nvidia",
+        "tags":  [
+
+                 ],
+        "use_cases":  [
+                          "dedicated-endpoint",
+                          "text",
+                          "summarization",
+                          "context_and_rag",
+                          "code",
+                          "reasoning",
+                          "function_calling",
+                          "complex_writing",
+                          "responses_api"
+                      ],
+        "policy_url":  "https://openmdw.ai/license/1-1/",
+        "license":  {
+                        "url":  "https://openmdw.ai/license/1-1/",
+                        "name":  "openmdw-1.1",
+                        "type":  ""
+                    },
+        "size_b":  0,
+        "quality":  0,
+        "flavors":  [
+                        {
+                            "model_id":  "nvidia/Nemotron-3-Ultra-550b-a55b",
+                            "model_type":  "text2text",
+                            "model_name":  "Nemotron-3-Ultra-550b-a55b",
+                            "model_description":  "Nemotron 3 Ultra is a 550B hybrid MoE model from NVIDIA, optimized for the most demanding multi-agent AI and complex reasoning tasks.",
+                            "label":  "cheap",
+                            "regions":  [
+                                            {
+                                                "country_code":  "US",
+                                                "name":  "us-central1"
+                                            }
+                                        ],
+                            "external_provider":  false,
+                            "tags":  [
+
+                                     ],
+                            "use_cases":  [
+                                              "dedicated-endpoint",
+                                              "text",
+                                              "summarization",
+                                              "context_and_rag",
+                                              "code",
+                                              "reasoning",
+                                              "function_calling",
+                                              "complex_writing",
+                                              "responses_api"
+                                          ],
+                            "context_window_k":  1024,
+                            "max_model_len":  1048576,
+                            "tokens_per_second":  523,
+                            "input_price_per_million_tokens":  1,
+                            "output_price_per_million_tokens":  3,
+                            "quantization":  "fp4"
+                        }
+                    ],
+        "context_window_k":  1024
+    },
+    {
+        "type":  "text2text",
+        "name":  "Nemotron-3.5-Lightning",
+        "created_at":  "2026-08-11T00:00:00.000Z",
+        "status":  "active",
+        "logo_url":  "",
+        "huggingface_url":  "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+        "description":  "NVIDIA\u0027s 30B-parameter hybrid MoE model with 3B active parameters per token, designed for efficient agentic reasoning, tool use, coding, and long-context workflows.",
+        "vendor":  "nvidia",
+        "tags":  [
+                     "1M context",
+                     "reasoning",
+                     "code",
+                     "function calling",
+                     "MTP"
+                 ],
+        "use_cases":  [
+                          "text",
+                          "reasoning",
+                          "function_calling",
+                          "code",
+                          "context_and_rag",
+                          "responses_api"
+                      ],
+        "license":  {
+                        "url":  "https://openmdw.ai/license/1-1/",
+                        "name":  "OpenMDW v1.1",
+                        "type":  ""
+                    },
+        "size_b":  30,
+        "quality":  0,
+        "flavors":  [
+                        {
+                            "model_id":  "nvidia/Nemotron-3_5-Lightning",
+                            "model_type":  "text2text",
+                            "model_name":  "Nemotron-3.5-Lightning",
+                            "model_description":  "NVIDIA\u0027s 30B-parameter hybrid MoE model with 3B active parameters per token, designed for efficient agentic reasoning, tool use, coding, and long-context workflows.",
+                            "label":  "cheap",
+                            "regions":  [
+                                            {
+                                                "country_code":  "FI",
+                                                "name":  "eu-north1"
+                                            }
+                                        ],
+                            "external_provider":  false,
+                            "tags":  [
+                                         "1M context",
+                                         "reasoning",
+                                         "code",
+                                         "function calling",
+                                         "MTP"
+                                     ],
+                            "use_cases":  [
+                                              "text",
+                                              "reasoning",
+                                              "function_calling",
+                                              "code",
+                                              "context_and_rag",
+                                              "responses_api"
+                                          ],
+                            "context_window_k":  1024,
+                            "max_model_len":  1048576,
+                            "tokens_per_second":  314.12,
+                            "input_price_per_million_tokens":  0.06,
+                            "output_price_per_million_tokens":  0.24,
+                            "quantization":  "bf16"
+                        }
+                    ],
+        "context_window_k":  1024
+    }
+]

@@ -1,0 +1,54 @@
+{
+  "provider": "nvidia-nim",
+  "tier": "strong",
+  "model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+  "priced": false,
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a test probe. Answer concisely."
+      },
+      {
+        "role": "user",
+        "content": "Reply with exactly: OK"
+      }
+    ],
+    "max_tokens": 128,
+    "temperature": 0.0
+  },
+  "raw_response": {
+    "id": "chatcmpl-aad5dda2-2074-46c3-ac3c-49b9ad9a1674",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "content": "OK",
+          "role": "assistant",
+          "reasoning_content": null
+        },
+        "finish_reason": "stop",
+        "logprobs": null
+      }
+    ],
+    "created": 1792732273,
+    "model": "nvidia/nemotron-3-ultra-550b-a55b",
+    "service_tier": null,
+    "system_fingerprint": null,
+    "object": "chat.completion",
+    "usage": {
+      "prompt_tokens": 32,
+      "completion_tokens": 2,
+      "total_tokens": 34
+    }
+  },
+  "usage": {
+    "prompt_tokens": 32,
+    "completion_tokens": 2,
+    "total_tokens": 34
+  },
+  "finish_reason": "stop",
+  "content_preview": "OK",
+  "cost_usd": null,
+  "unpriced_calls": 1
+}

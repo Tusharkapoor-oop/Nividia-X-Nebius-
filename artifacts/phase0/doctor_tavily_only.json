@@ -1,0 +1,41 @@
+{
+  "version": "0.1.0",
+  "checks": [
+    {
+      "check": "python>=3.11",
+      "ok": true,
+      "detail": "3.13.15"
+    },
+    {
+      "check": "git",
+      "ok": true,
+      "detail": "git version 2.55.0.windows.5"
+    },
+    {
+      "check": "keys",
+      "ok": false,
+      "detail": "NEBIUS=<unset> TAVILY=tvlyà"
+    },
+    {
+      "check": "tokenfactory catalog",
+      "ok": true,
+      "detail": "28 models listed"
+    },
+    {
+      "check": "tier mapping",
+      "ok": true,
+      "detail": "cheap: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B in=$0.06/M out=$0.24/M ctx=262144; default: nvidia/Nemotron-3_5-Lightning in=$0.06/M out=$0.24/M ctx=1048576; strong: nvidia/Nemotron-3-Ultra-550b-a55b in=$1.00/M out=$3.00/M ctx=1048576"
+    },
+    {
+      "check": "tokenfactory chat",
+      "ok": true,
+      "detail": "skipped (no key)"
+    },
+    {
+      "check": "tavily search",
+      "ok": true,
+      "detail": "1 result(s), credits=1"
+    }
+  ],
+  "pass": false
+}

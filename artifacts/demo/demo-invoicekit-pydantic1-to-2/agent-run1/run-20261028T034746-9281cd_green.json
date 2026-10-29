@@ -1,0 +1,21 @@
+{
+  "status": "GREEN",
+  "run_id": "run-20261028T034746-9281cd",
+  "result": {
+    "exit_code": 0,
+    "passed": 30,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "duration_s": 0.17,
+    "output_tail": [
+      "..............................                                           [100%]",
+      "30 passed in 0.17s"
+    ]
+  },
+  "reasons": [
+    "pytest exit 0: GREEN"
+  ]
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "status": 400,
+    "content": null,
+    "reasoning_content": "",
+    "finish_reason": null,
+    "usage": null,
+    "error": "Function id 'c4ed50ff-b5c3-409d-ab57-b79c33f5bb39': DEGRADED function cannot be invoked"
+  },
+  {
+    "model": "nvidia/nemotron-3-super-120b-a12b",
+    "status": 404,
+    "content": null,
+    "reasoning_content": "",
+    "finish_reason": null,
+    "usage": null,
+    "error": "Function 'ac74040f-9fc9-4c5e-ac74-279ba5161d69': Not found for account '<redacted>'"
+  },
+  {
+    "model": "nvidia/llama-3.1-nemotron-70b-instruct",
+    "status": 404,
+    "content": null,
+    "reasoning_content": "",
+    "finish_reason": null,
+    "usage": null,
+    "error": "Function '9b96341b-9791-4db9-a00d-4e43aa192a39': Not found for account '<redacted>'"
+  }
+]

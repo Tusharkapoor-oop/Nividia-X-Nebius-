@@ -1,0 +1,120 @@
+{
+  "root": "repo",
+  "created_at": "2026-10-28T03:59:03+00:00",
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "sha256": "ad76066e680b881c8fea8c1acebd28bb0c84ace37ea74bc32380365a7997727c",
+      "size": 2797
+    },
+    {
+      "path": "tests/argparse/test_actions.py",
+      "sha256": "bf107ec0a78412066466d860267fa0bfbea67539112a5205e97349a285bf2d0b",
+      "size": 2847
+    },
+    {
+      "path": "tests/argparse/test_parser.py",
+      "sha256": "2183f96303ab7a72b66647680b677355c03a5faa632bde4fa7ceb8a8b9e1d810",
+      "size": 25298
+    },
+    {
+      "path": "tests/conftest.py",
+      "sha256": "30d97363da2fc2b5dcd2e10a16f5797e84b5bf05bee49b9b7b3dd9e5f9d9e47e",
+      "size": 9030
+    },
+    {
+      "path": "tests/functional/test_environment_variables.py",
+      "sha256": "bf2db92c5f095ba78cea761f5c574dee49c0ae19705dad827ed5a5e9d3f3f1a3",
+      "size": 17279
+    },
+    {
+      "path": "tests/utils/test_arguments.py",
+      "sha256": "913b540eef3bc8e70d3ffe6eaf245c1cedc0de2df44e18e013a4526c15a5f4d2",
+      "size": 2191
+    },
+    {
+      "path": "tests/utils/test_errors.py",
+      "sha256": "2f57afbdbea8048a5c764767cdfa0e2cefd95947160396ef7549f53c5b49bff3",
+      "size": 2214
+    },
+    {
+      "path": "tests/utils/test_namespaces.py",
+      "sha256": "3b8353f23d5cae0cabdde4e81175194e8918c780e1a8fb577d496c120857a1d3",
+      "size": 987
+    },
+    {
+      "path": "tests/utils/test_types.py",
+      "sha256": "925c99e2b3a8d1dbdaaba92ae3b8549ad1f9c7d83ad3b1f7b20292768acb6c9b",
+      "size": 2922
+    }
+  ],
+  "all_repo_files": [
+    ".github/workflows/linting.yml",
+    ".github/workflows/tests.yml",
+    ".github/workflows/typing.yml",
+    ".gitignore",
+    "docs/assets/images/logo.svg",
+    "docs/assets/images/showcase_01.png",
+    "docs/assets/images/showcase_02.png",
+    "docs/assets/images/showcase_03.png",
+    "docs/assets/images/showcase_04.png",
+    "docs/assets/images/showcase_05.png",
+    "docs/assets/images/showcase_06.png",
+    "docs/assets/stylesheets/reference.css",
+    "docs/background.md",
+    "docs/CNAME",
+    "docs/examples/commands.md",
+    "docs/examples/simple.md",
+    "docs/index.md",
+    "docs/reference/reference.py",
+    "docs/showcase.md",
+    "docs/usage/argument_parser.md",
+    "docs/usage/arguments/choices.md",
+    "docs/usage/arguments/commands.md",
+    "docs/usage/arguments/flags.md",
+    "docs/usage/arguments/index.md",
+    "docs/usage/arguments/regular.md",
+    "docs/usage/arguments/variadic.md",
+    "examples/commands.py",
+    "examples/simple.py",
+    "LICENSE.md",
+    "mkdocs.yml",
+    "poetry.lock",
+    "pydantic_argparse/__init__.py",
+    "pydantic_argparse/__metadata__.py",
+    "pydantic_argparse/argparse/__init__.py",
+    "pydantic_argparse/argparse/actions.py",
+    "pydantic_argparse/argparse/parser.py",
+    "pydantic_argparse/argparse/patches.py",
+    "pydantic_argparse/parsers/__init__.py",
+    "pydantic_argparse/parsers/boolean.py",
+    "pydantic_argparse/parsers/command.py",
+    "pydantic_argparse/parsers/container.py",
+    "pydantic_argparse/parsers/enum.py",
+    "pydantic_argparse/parsers/literal.py",
+    "pydantic_argparse/parsers/mapping.py",
+    "pydantic_argparse/parsers/standard.py",
+    "pydantic_argparse/py.typed",
+    "pydantic_argparse/utils/__init__.py",
+    "pydantic_argparse/utils/arguments.py",
+    "pydantic_argparse/utils/errors.py",
+    "pydantic_argparse/utils/namespaces.py",
+    "pydantic_argparse/utils/pydantic.py",
+    "pydantic_argparse/utils/types.py",
+    "pyproject.toml",
+    "README.md",
+    "tests/__init__.py",
+    "tests/argparse/__init__.py",
+    "tests/argparse/test_actions.py",
+    "tests/argparse/test_parser.py",
+    "tests/conftest.py",
+    "tests/functional/__init__.py",
+    "tests/functional/test_environment_variables.py",
+    "tests/parsers/__init__.py",
+    "tests/utils/__init__.py",
+    "tests/utils/test_arguments.py",
+    "tests/utils/test_errors.py",
+    "tests/utils/test_namespaces.py",
+    "tests/utils/test_types.py"
+  ]
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comparison - UpgradePilot recorded runs</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site">
+  <div class="wrap">
+    <h1>UpgradePilot recorded runs</h1>
+    <nav aria-label="Site">
+      <ul>
+        <li><a href="./index.html">Runs</a></li>
+        <li><a href="./comparison.html">Comparison</a></li>
+        <li><a href="./about.html">About this site</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<h1>Comparison</h1>
+<p class="lead">Benchmark rows and demo-case rows are kept separate on purpose: the demo case is self-written and is not a benchmark result.</p>
+<section aria-labelledby="bench"><h2 id="bench">Benchmark strategies (Phase 5)</h2>
+<div class="tablewrap" role="region" tabindex="0"><table><caption>Real runs of each strategy on the same pinned checkout.</caption><thead><tr><th scope="col">Run</th><th scope="col">Provider</th><th scope="col">Status</th><th scope="col">Suite</th><th scope="col">Cost</th><th scope="col">Tokens</th><th scope="col">Recorded at (UTC)</th></tr></thead><tbody><tr><td>pytest-lazy-fixture-pytest7-to-8: agent</td><td>NVIDIA NIM (dev run - not submission-eligible)</td><td><span class="badge warn">STUCK</span></td><td>exit 1: 12 passed, 33 failed, 0 error(s)</td><td>unpriced</td><td>17765 in / 8608 out, 6 call(s)</td><td><time datetime="2026-10-28T04:05:21.232Z">2026-10-28T04:05:21.232Z</time></td></tr><tr><td>pytest-lazy-fixture-pytest7-to-8: single-shot</td><td>NVIDIA NIM (dev run - not submission-eligible)</td><td><span class="badge warn">STUCK</span></td><td>exit 1: 0 passed, 0 failed, 0 error(s)</td><td>unpriced</td><td>2861 in / 1970 out, 1 call(s)</td><td><time datetime="2026-10-28T04:03:24.236Z">2026-10-28T04:03:24.236Z</time></td></tr><tr><td>pytest-lazy-fixture-pytest7-to-8: codemod</td><td>NVIDIA NIM (dev run - not submission-eligible)</td><td><span class="badge bad">ENV_FAIL</span></td><td>exit 2: 0 passed, 0 failed, 1 error(s)</td><td>unpriced</td><td>0 in / 0 out, 0 call(s)</td><td><time datetime="2026-10-28T04:01:41.879Z">2026-10-28T04:01:41.879Z</time></td></tr><tr><td>pytest-lazy-fixture-pytest7-to-8: bump-only</td><td>NVIDIA NIM (dev run - not submission-eligible)</td><td><span class="badge bad">ENV_FAIL</span></td><td>exit 2: 0 passed, 0 failed, 1 error(s)</td><td>unpriced</td><td>0 in / 0 out, 0 call(s)</td><td><time datetime="2026-10-28T03:59:47.148Z">2026-10-28T03:59:47.148Z</time></td></tr><tr><td>pydantic-argparse-pydantic1-to-2: agent</td><td>NVIDIA NIM (dev run - not submission-eligible)</td><td><span class="badge bad">ENV_FAIL</span></td><td>exit 4: 0 passed, 0 failed, 0 error(s)</td><td>unpriced</td><td>11189 in / 1660 out, 6 call(s)</td><td><time datetime="2026-10-28T03:57:38.773Z">2026-10-28T03:57:38.773Z</time></td></tr><tr><td>pydantic-argparse-pydantic1-to-2: single-shot</td><td>NVIDIA NIM (dev run - not submission-eligible)</td><td><span class="badge bad">ENV_FAIL</span></td><td>exit 4: 0 passed, 0 failed, 0 error(s)</td><td>unpriced</td><td>13431 in / 872 out, 1 call(s)</td><td><time datetime="2026-10-28T03:56:07.664Z">2026-10-28T03:56:07.664Z</time></td></tr><tr><td>pydantic-argparse-pydantic1-to-2: codemod</td><td>NVIDIA NIM (dev run - not submission-eligible)</td><td><span class="badge bad">ENV_FAIL</span></td><td>exit 4: 0 passed, 0 failed, 0 error(s)</td><td>unpriced</td><td>0 in / 0 out, 0 call(s)</td><td><time datetime="2026-10-28T03:54:24.376Z">2026-10-28T03:54:24.376Z</time></td></tr><tr><td>pydantic-argparse-pydantic1-to-2: bump-only</td><td>NVIDIA NIM (dev run - not submission-eligible)</td><td><span class="badge bad">ENV_FAIL</span></td><td>exit 4: 0 passed, 0 failed, 0 error(s)</td><td>unpriced</td><td>0 in / 0 out, 0 call(s)</td><td><time datetime="2026-10-28T03:52:59.476Z">2026-10-28T03:52:59.476Z</time></td></tr></tbody></table></div>
+</section>
+<section aria-labelledby="demo"><h2 id="demo">Demo case (not a benchmark)</h2>
+<div class="tablewrap" role="region" tabindex="0"><table><caption>invoicekit, pydantic 1.10.22 to 2.12.4, plus the external held-out contract.</caption><thead><tr><th scope="col">Run</th><th scope="col">Provider</th><th scope="col">Status</th><th scope="col">Suite</th><th scope="col">Cost</th><th scope="col">Tokens</th><th scope="col">Recorded at (UTC)</th></tr></thead><tbody><tr><td>demo-invoicekit-pydantic1-to-2: agent</td><td>NVIDIA NIM (dev run - not submission-eligible)</td><td><span class="badge green">GREEN</span></td><td>visible 13P/0F/0E (exit 0); held-out GREEN: 11 passed, 0 failed</td><td>unpriced</td><td>7288 in / 2206 out, 4 call(s)</td><td><time datetime="2026-10-28T03:49:59.209Z">2026-10-28T03:49:59.209Z</time></td></tr><tr><td>demo-invoicekit-pydantic1-to-2: agent-run1</td><td>NVIDIA NIM (dev run - not submission-eligible)</td><td><span class="badge bad">CHEATED</span></td><td>visible 0P/0F/0E (exit 4); held-out ENV_FAIL: 0 passed, 0 failed</td><td>unpriced</td><td>4105 in / 1500 out, 3 call(s)</td><td><time datetime="2026-10-28T03:46:49.265Z">2026-10-28T03:46:49.265Z</time></td></tr><tr><td>demo-invoicekit-pydantic1-to-2: single-shot</td><td>NVIDIA NIM (dev run - not submission-eligible)</td><td><span class="badge bad">ENV_FAIL</span></td><td>visible 0P/0F/0E (exit 4); held-out ENV_FAIL: 0 passed, 0 failed</td><td>unpriced</td><td>2062 in / 599 out, 1 call(s)</td><td><time datetime="2026-10-28T03:45:19.515Z">2026-10-28T03:45:19.515Z</time></td></tr><tr><td>demo-invoicekit-pydantic1-to-2: bump-only</td><td>NVIDIA NIM (dev run - not submission-eligible)</td><td><span class="badge bad">ENV_FAIL</span></td><td>visible 0P/0F/0E (exit 4); held-out ENV_FAIL: 0 passed, 0 failed</td><td>unpriced</td><td>0 in / 0 out, 0 call(s)</td><td><time datetime="2026-10-28T03:43:52.794Z">2026-10-28T03:43:52.794Z</time></td></tr></tbody></table></div>
+</section>
+</main>
+<footer class="site"><div class="wrap">Static site generated from artifact JSON files. Every value on these pages was read from a file in the repository.</div></footer>
+</body>
+</html>

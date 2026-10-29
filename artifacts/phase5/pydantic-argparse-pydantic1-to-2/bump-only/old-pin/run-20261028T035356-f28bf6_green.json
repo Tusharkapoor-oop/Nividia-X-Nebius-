@@ -1,0 +1,49 @@
+{
+  "status": "GREEN",
+  "run_id": "run-20261028T035356-f28bf6",
+  "result": {
+    "exit_code": 0,
+    "passed": 746,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "duration_s": 0.0,
+    "output_tail": [
+      "tests/utils/test_types.py::test_is_field_a[List-list1] PASSED            [ 96%]",
+      "tests/utils/test_types.py::test_is_field_a[List-Container1] PASSED       [ 96%]",
+      "tests/utils/test_types.py::test_is_field_a[Tuple-tuple0] PASSED          [ 96%]",
+      "tests/utils/test_types.py::test_is_field_a[Tuple-Container0] PASSED      [ 96%]",
+      "tests/utils/test_types.py::test_is_field_a[Tuple-tuple1] PASSED          [ 96%]",
+      "tests/utils/test_types.py::test_is_field_a[Tuple-Container1] PASSED      [ 97%]",
+      "tests/utils/test_types.py::test_is_field_a[Set-set0] PASSED              [ 97%]",
+      "tests/utils/test_types.py::test_is_field_a[Set-Container0] PASSED        [ 97%]",
+      "tests/utils/test_types.py::test_is_field_a[Set-set1] PASSED              [ 97%]",
+      "tests/utils/test_types.py::test_is_field_a[Set-Container1] PASSED        [ 97%]",
+      "tests/utils/test_types.py::test_is_field_a[FrozenSet-frozenset0] PASSED  [ 97%]",
+      "tests/utils/test_types.py::test_is_field_a[FrozenSet-Container0] PASSED  [ 97%]",
+      "tests/utils/test_types.py::test_is_field_a[FrozenSet-frozenset1] PASSED  [ 97%]",
+      "tests/utils/test_types.py::test_is_field_a[FrozenSet-Container1] PASSED  [ 98%]",
+      "tests/utils/test_types.py::test_is_field_a[Deque-deque0] PASSED          [ 98%]",
+      "tests/utils/test_types.py::test_is_field_a[Deque-Container0] PASSED      [ 98%]",
+      "tests/utils/test_types.py::test_is_field_a[Deque-deque1] PASSED          [ 98%]",
+      "tests/utils/test_types.py::test_is_field_a[Deque-Container1] PASSED      [ 98%]",
+      "tests/utils/test_types.py::test_is_field_a[Dict-dict0] PASSED            [ 98%]",
+      "tests/utils/test_types.py::test_is_field_a[Dict-Mapping0] PASSED         [ 98%]",
+      "tests/utils/test_types.py::test_is_field_a[Dict-dict1] PASSED            [ 99%]",
+      "tests/utils/test_types.py::test_is_field_a[Dict-Mapping1] PASSED         [ 99%]",
+      "tests/utils/test_types.py::test_is_field_a[Literal-Literal0] PASSED      [ 99%]",
+      "tests/utils/test_types.py::test_is_field_a[Literal-Literal1] PASSED      [ 99%]",
+      "tests/utils/test_types.py::test_is_field_a[TestCommand-BaseModel] PASSED [ 99%]",
+      "tests/utils/test_types.py::test_is_field_a[TestCommands-BaseModel] PASSED [ 99%]",
+      "tests/utils/test_types.py::test_is_field_a[TestEnum-Enum] PASSED         [ 99%]",
+      "tests/utils/test_types.py::test_is_field_a[TestEnumSingle-Enum] PASSED   [100%]",
+      "",
+      "============================ 746 passed in 10.62s ============================="
+    ]
+  },
+  "reasons": [
+    "pytest exit 0: GREEN"
+  ]
+}

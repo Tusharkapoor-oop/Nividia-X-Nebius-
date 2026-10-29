@@ -1,0 +1,45 @@
+{
+  "case_id": "pytest-lazy-fixture-pytest7-to-8",
+  "strategy": "codemod",
+  "status": "ENV_FAIL",
+  "exit_code": 2,
+  "passed": 0,
+  "failed": 0,
+  "errors": 1,
+  "suite_duration_s": 0.0,
+  "wall_time_s": 102.36,
+  "iterations": 0,
+  "llm_calls": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "cost_usd": null,
+  "fully_priced": false,
+  "guard_clean": true,
+  "guard_summary": "clean (4 test files unchanged)",
+  "edits": [],
+  "notes": [
+    "old-pin suite: GREEN (45 passed, 0 failed, 1 skipped, 1 xfailed)",
+    "post-bump suite before any repair: ENV_FAIL",
+    "no mechanical rename table for pytest pytest==7.4.4 -> 8.4.1; codemod is the control"
+  ],
+  "artifacts": [
+    "artifacts\\phase5\\pytest-lazy-fixture-pytest7-to-8\\codemod\\old-pin\\run-20261028T040306-ad75f2_green.json",
+    "artifacts\\phase5\\pytest-lazy-fixture-pytest7-to-8\\codemod\\bump-only\\run-20261028T040321-250630_env_fail.json",
+    "artifacts\\phase5\\pytest-lazy-fixture-pytest7-to-8\\codemod\\events.jsonl"
+  ],
+  "recorded_at": "2026-10-28T04:01:41.879Z",
+  "provider": "nvidia-nim",
+  "run_class": "dev",
+  "models": {
+    "cheap": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "default": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "strong": "nvidia/nemotron-3-ultra-550b-a55b"
+  },
+  "versions": {
+    "pytest": "8.4.1",
+    "python": "3.13.15"
+  },
+  "reference_status": "GREEN",
+  "reference_skipped": 1,
+  "reference_xfailed": 1
+}

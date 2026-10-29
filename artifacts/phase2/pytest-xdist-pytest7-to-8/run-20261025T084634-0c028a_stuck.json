@@ -1,0 +1,49 @@
+{
+  "status": "STUCK",
+  "run_id": "run-20261025T084634-0c028a",
+  "result": {
+    "exit_code": 1,
+    "passed": 154,
+    "failed": 81,
+    "errors": 0,
+    "skipped": 6,
+    "xfailed": 9,
+    "xpassed": 1,
+    "duration_s": 0.0,
+    "output_tail": [
+      "FAILED testing/test_remote.py::test_remote_sys_path - assert <ExitCode.USAGE_...",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_popen_no_default_chdir",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_explicit_execmodel[False-thread]",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_explicit_execmodel[False-main_thread_only]",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_explicit_execmodel[False-gevent]",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_explicit_execmodel[False-eventlet]",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_explicit_execmodel[True-thread]",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_explicit_execmodel[True-main_thread_only]",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_explicit_execmodel[True-gevent]",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_explicit_execmodel[True-eventlet]",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_setup_node_execmodel[popen-main_thread_only]",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_setup_node_execmodel[popen//execmodel=main_thread_only-main_thread_only]",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_setup_node_execmodel[popen//execmodel=thread-thread]",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_default_chdir",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_popen_makegateway_events",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_popen_makegateway_passes_stable_worker_index",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_popens_rsync",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_rsync_popen_with_path",
+      "FAILED testing/test_workermanage.py::TestNodeManagerPopen::test_rsync_same_popen_twice",
+      "FAILED testing/test_workermanage.py::TestHRSync::test_hrsync_one_host - EOFEr...",
+      "FAILED testing/test_workermanage.py::TestNodeManager::test_popen_rsync_subdir",
+      "FAILED testing/test_workermanage.py::TestNodeManager::test_rsync_report[-q-False]",
+      "FAILED testing/test_workermanage.py::TestNodeManager::test_rsync_report[-False]",
+      "FAILED testing/test_workermanage.py::TestNodeManager::test_rsync_report[-v-True]",
+      "FAILED testing/test_workermanage.py::TestNodeManager::test_init_rsync_roots",
+      "FAILED testing/test_workermanage.py::TestNodeManager::test_rsyncignore - Valu...",
+      "FAILED testing/test_workermanage.py::TestNodeManager::test_optimise_popen - V...",
+      "FAILED testing/test_workermanage.py::TestNodeManager::test_proxy_gateway_setup_nodes",
+      "FAILED testing/test_workermanage.py::TestNodeManager::test_proxy_gateway - At...",
+      "81 failed, 154 passed, 6 skipped, 9 xfailed, 1 xpassed, 36 warnings in 282.74s (0:04:42)"
+    ]
+  },
+  "reasons": [
+    "pytest exit 1: STUCK"
+  ]
+}

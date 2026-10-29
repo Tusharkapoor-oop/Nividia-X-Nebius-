@@ -1,0 +1,12 @@
+{
+  "method": "sha256-path",
+  "held_out_fraction": 0.25,
+  "total": 3,
+  "visible": [
+    "tests/test_pricing.py",
+    "tests/test_report.py"
+  ],
+  "held_out": [
+    "tests/test_models.py"
+  ]
+}

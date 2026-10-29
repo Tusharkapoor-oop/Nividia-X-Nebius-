@@ -1,0 +1,66 @@
+{
+  "query": "pydantic 2.0 migration guide breaking changes",
+  "answer": "",
+  "results": [
+    {
+      "title": "Migration Guide | Pydantic Docs",
+      "url": "https://pydantic.dev/docs/validation/latest/get-started/migration",
+      "content": "Skip to content\n\n/  Docs Pydantic Docs\n\n# Migration Guide\n\nPydantic V2 introduces a number of changes to the API, including some breaking changes.\n\nThis page provides a guide highlighting the most important changes to help you migrate your code from Pydantic V1 to Pydantic V2.\n\n## Install Pydantic V2\n\nPydantic V2 is now the current production release of Pydantic. You can install Pydantic V2 from PyPI:\n\nTerminal\n\n```\npip install -U pydantic \n``` [...] Pydantic V2 changes some of the logic for specifying whether a field annotated as `Optional` is required (i.e., has no default value) or not (i.e., has a default value of `None` or any other value of the corresponding type), and now more closely matches the behavior of `dataclasses`. Similarly, fields annotated as `Any` no longer have a default value of `None`.\n\nThe following table describes the behavior of field annotations in V2:",
+      "score": 0.86052185,
+      "published_date": null
+    },
+    {
+      "title": "Changelog | Pydantic Docs",
+      "url": "https://pydantic.dev/docs/validation/latest/get-started/changelog",
+      "content": "Breaking Change: deprecate the `Model.fields` property, use `Model.__fields__` instead, #883 by @samuelcolvin\n Breaking Change: Change the precedence of aliases so child model aliases override parent aliases, including using `alias_generator`, #904 by @samuelcolvin\n Breaking change: Rename `skip_defaults` to `exclude_unset`, and add ability to exclude actual defaults, #915 by @dmontagu [...] Breaking change: Added `initvars` support to `post_init_post_parse`, #748 by @Raphael-C-Almeida\n Breaking Change: Make `BaseModel.json()` only serialize the `__root__` key for models with custom root, #752 by @dmontagu\n Breaking Change: complete rewrite of `URL` parsing logic, #755 by @samuelcolvin\n Breaking Change: preserve superclass annotations for field-determination when not provided in subclass, #757 by @dmontagu [...] Breaking Change: modify default config settings for `BaseSettings`; `case_insensitive` renamed to `case_sensitive`, default changed to `case_sensitive = False`, `env_prefix` default changed to `''` - e.g. no prefix, #721 by @dmontagu\n Breaking change: Implement `root_validator` and rename root errors from `__obj__` to `__root__`, #729 by @samuelcolvin\n Breaking Change: alter the behaviour of `dict(model)` so that sub-models are no longer converted to dictionaries, #733 by @samuelcolvin",
+      "score": 0.8585411,
+      "published_date": null
+    },
+    {
+      "title": "Complete Pydantic v1 \u2192 v2 migration guide: bump-pydantic, staged migration, and crushing 'silently breaking' changes | Tomoda Hinata \u2014 SaaS/DX",
+      "url": "https://tomodahinata.com/en/blog/pydantic-v1-to-v2-migration-complete-guide",
+      "content": "Other changes include the abolition of automatic conversion of \"an iterable of pairs \u2192 dict\" and the normalization of collection subclasses (`Counter`, etc.) to a plain `dict`, and so on. For the big picture of type coercion, also see the strict / lax section of the Pydantic v2 practical guide.\n\n## 5. Silently breaking \u2462: moved/removed features\n\nCases where the feature itself was moved or deleted. Some can be noticed with an import error (= still better), but you need to grasp them. [...] This article, faithful to the official migration guide, splits migration into 2 layers \u2014 \"\u2460 mechanical renames (automatable)\" and \"\u2461 silently breaking changes (no choice but to crush by hand)\" \u2014 and explains with emphasis on the latter. For the design of Pydantic v2 itself, see the Pydantic v2 practical guide.\n\nI can take on the implementation from this article as an engagement\n\nI build Python backends, from design to production [...] | Pydantic v1 (`class Config`) | Pydantic v2 (`model_config = ConfigDict(...)`) |\n --- |\n| `orm_mode = True` | `from_attributes=True` |\n| `allow_population_by_field_name` | `populate_by_name` |\n| `anystr_strip_whitespace` | `str_strip_whitespace` |\n| `min_anystr_length` / `max_anystr_length` | `str_min_length` / `str_max_length` |\n| `validate_all` | `validate_default` |\n| `schema_extra` | `json_schema_extra` |\n| `keep_untouched` | `ignored_types` |\n| `allow_mutation = False` | `frozen=True` |",
+      "score": 0.843393,
+      "published_date": null
+    }
+  ],
+  "credits_used": 1,
+  "response_time_s": 0.0,
+  "raw": {
+    "query": "pydantic 2.0 migration guide breaking changes",
+    "follow_up_questions": null,
+    "answer": null,
+    "images": [],
+    "results": [
+      {
+        "url": "https://pydantic.dev/docs/validation/latest/get-started/migration",
+        "title": "Migration Guide | Pydantic Docs",
+        "content": "Skip to content\n\n/  Docs Pydantic Docs\n\n# Migration Guide\n\nPydantic V2 introduces a number of changes to the API, including some breaking changes.\n\nThis page provides a guide highlighting the most important changes to help you migrate your code from Pydantic V1 to Pydantic V2.\n\n## Install Pydantic V2\n\nPydantic V2 is now the current production release of Pydantic. You can install Pydantic V2 from PyPI:\n\nTerminal\n\n```\npip install -U pydantic \n``` [...] Pydantic V2 changes some of the logic for specifying whether a field annotated as `Optional` is required (i.e., has no default value) or not (i.e., has a default value of `None` or any other value of the corresponding type), and now more closely matches the behavior of `dataclasses`. Similarly, fields annotated as `Any` no longer have a default value of `None`.\n\nThe following table describes the behavior of field annotations in V2:",
+        "score": 0.86052185,
+        "raw_content": null,
+        "id": "367c8a-00"
+      },
+      {
+        "url": "https://pydantic.dev/docs/validation/latest/get-started/changelog",
+        "title": "Changelog | Pydantic Docs",
+        "content": "Breaking Change: deprecate the `Model.fields` property, use `Model.__fields__` instead, #883 by @samuelcolvin\n Breaking Change: Change the precedence of aliases so child model aliases override parent aliases, including using `alias_generator`, #904 by @samuelcolvin\n Breaking change: Rename `skip_defaults` to `exclude_unset`, and add ability to exclude actual defaults, #915 by @dmontagu [...] Breaking change: Added `initvars` support to `post_init_post_parse`, #748 by @Raphael-C-Almeida\n Breaking Change: Make `BaseModel.json()` only serialize the `__root__` key for models with custom root, #752 by @dmontagu\n Breaking Change: complete rewrite of `URL` parsing logic, #755 by @samuelcolvin\n Breaking Change: preserve superclass annotations for field-determination when not provided in subclass, #757 by @dmontagu [...] Breaking Change: modify default config settings for `BaseSettings`; `case_insensitive` renamed to `case_sensitive`, default changed to `case_sensitive = False`, `env_prefix` default changed to `''` - e.g. no prefix, #721 by @dmontagu\n Breaking change: Implement `root_validator` and rename root errors from `__obj__` to `__root__`, #729 by @samuelcolvin\n Breaking Change: alter the behaviour of `dict(model)` so that sub-models are no longer converted to dictionaries, #733 by @samuelcolvin",
+        "score": 0.8585411,
+        "raw_content": null,
+        "id": "f11671-01"
+      },
+      {
+        "url": "https://tomodahinata.com/en/blog/pydantic-v1-to-v2-migration-complete-guide",
+        "title": "Complete Pydantic v1 \u2192 v2 migration guide: bump-pydantic, staged migration, and crushing 'silently breaking' changes | Tomoda Hinata \u2014 SaaS/DX",
+        "content": "Other changes include the abolition of automatic conversion of \"an iterable of pairs \u2192 dict\" and the normalization of collection subclasses (`Counter`, etc.) to a plain `dict`, and so on. For the big picture of type coercion, also see the strict / lax section of the Pydantic v2 practical guide.\n\n## 5. Silently breaking \u2462: moved/removed features\n\nCases where the feature itself was moved or deleted. Some can be noticed with an import error (= still better), but you need to grasp them. [...] This article, faithful to the official migration guide, splits migration into 2 layers \u2014 \"\u2460 mechanical renames (automatable)\" and \"\u2461 silently breaking changes (no choice but to crush by hand)\" \u2014 and explains with emphasis on the latter. For the design of Pydantic v2 itself, see the Pydantic v2 practical guide.\n\nI can take on the implementation from this article as an engagement\n\nI build Python backends, from design to production [...] | Pydantic v1 (`class Config`) | Pydantic v2 (`model_config = ConfigDict(...)`) |\n --- |\n| `orm_mode = True` | `from_attributes=True` |\n| `allow_population_by_field_name` | `populate_by_name` |\n| `anystr_strip_whitespace` | `str_strip_whitespace` |\n| `min_anystr_length` / `max_anystr_length` | `str_min_length` / `str_max_length` |\n| `validate_all` | `validate_default` |\n| `schema_extra` | `json_schema_extra` |\n| `keep_untouched` | `ignored_types` |\n| `allow_mutation = False` | `frozen=True` |",
+        "score": 0.843393,
+        "raw_content": null,
+        "id": "5d6bf9-02"
+      }
+    ],
+    "response_time": 0.0,
+    "usage": {
+      "credits": 1
+    },
+    "request_id": "ed3dc4cd-2cc3-4ca4-b643-fbdeac6b3e96"
+  }
+}

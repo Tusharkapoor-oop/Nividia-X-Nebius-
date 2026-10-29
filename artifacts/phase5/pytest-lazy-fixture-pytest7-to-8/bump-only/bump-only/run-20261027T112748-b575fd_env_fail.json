@@ -1,0 +1,49 @@
+{
+  "status": "ENV_FAIL",
+  "run_id": "run-20261027T112748-b575fd",
+  "result": {
+    "exit_code": 2,
+    "passed": 0,
+    "failed": 0,
+    "errors": 1,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "duration_s": 0.16,
+    "output_tail": [
+      ".upv-venv\\Lib\\site-packages\\pluggy\\_caller.py:262: in call_extra",
+      "    return self._hookexec(self.name, hookimpls, kwargs, firstresult)",
+      "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+      ".upv-venv\\Lib\\site-packages\\pluggy\\_manager.py:183: in _hookexec",
+      "    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)",
+      "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+      ".upv-venv\\Lib\\site-packages\\pluggy\\_execution.py:54: in run_old_style_hookwrapper",
+      "    teardown.send(result)",
+      "pytest_lazyfixture.py:74: in pytest_generate_tests",
+      "    normalize_metafunc_calls(metafunc, 'funcargs')",
+      "pytest_lazyfixture.py:81: in normalize_metafunc_calls",
+      "    calls = normalize_call(callspec, metafunc, valtype, used_keys)",
+      "            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+      "pytest_lazyfixture.py:105: in normalize_call",
+      "    valtype_keys = set(getattr(callspec, valtype).keys()) - used_keys",
+      "                       ^^^^^^^^^^^^^^^^^^^^^^^^^^",
+      "E   AttributeError: 'CallSpec2' object has no attribute 'funcargs'",
+      "============================== warnings summary ===============================",
+      ".upv-venv\\Lib\\site-packages\\_pytest\\python.py:466",
+      "  C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pytest-lazy-fixture-pytest7-to-8--bump-only\\repo\\.upv-venv\\Lib\\site-packages\\_pytest\\python.py:466: PluggyTeardownRaisedWarning: A plugin raised an exception during an old-style hookwrapper teardown.",
+      "  Plugin: lazy-fixture, Hook: pytest_generate_tests",
+      "  AttributeError: 'CallSpec2' object has no attribute 'funcargs'",
+      "  For more information see https://pluggy.readthedocs.io/en/stable/api_reference.html#pluggy.PluggyTeardownRaisedWarning",
+      "    self.ihook.pytest_generate_tests.call_extra(methods, dict(metafunc=metafunc))",
+      "",
+      "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+      "=========================== short test summary info ===========================",
+      "ERROR tests/test_lazyfixture.py - AttributeError: 'CallSpec2' object has no a...",
+      "!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!",
+      "1 warning, 1 error in 0.16s"
+    ]
+  },
+  "reasons": [
+    "pytest exit 2: ENV_FAIL"
+  ]
+}

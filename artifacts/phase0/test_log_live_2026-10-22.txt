@@ -1,0 +1,17 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.13.15, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\ACER\Downloads\Nividia X nebius\upgradepilot\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\ACER\Downloads\Nividia X nebius\upgradepilot
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1, platformdirs-4.13.5, cov-7.1.0
+collecting ... collected 79 items / 75 deselected / 4 selected
+
+tests/test_live_calls.py::test_live_llm_call_per_tier[cheap] PASSED      [ 25%]
+tests/test_live_calls.py::test_live_llm_call_per_tier[default] PASSED    [ 50%]
+tests/test_live_calls.py::test_live_llm_call_per_tier[strong] PASSED     [ 75%]
+tests/test_live_calls.py::test_live_tavily_search PASSED                 [100%]
+
+====================== 4 passed, 75 deselected in 18.49s ======================
+EXIT=0
+DONE

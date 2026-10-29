@@ -1,0 +1,2 @@
+# The demo target's old pins. The upgrade under test is pydantic 1.10.22 -> 2.12.4.
+pydantic==1.10.22

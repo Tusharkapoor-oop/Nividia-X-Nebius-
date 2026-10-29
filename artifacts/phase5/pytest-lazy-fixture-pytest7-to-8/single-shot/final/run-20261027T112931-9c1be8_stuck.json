@@ -1,0 +1,49 @@
+{
+  "status": "STUCK",
+  "run_id": "run-20261027T112931-9c1be8",
+  "result": {
+    "exit_code": 1,
+    "passed": 0,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "xfailed": 0,
+    "xpassed": 0,
+    "duration_s": 0.0,
+    "output_tail": [
+      "    ~~~~~~~~~~~~~~^^^^^^^^^^^",
+      "  File \"C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pytest-lazy-fixture-pytest7-to-8--single-shot\\repo\\.upv-venv\\Lib\\site-packages\\_pytest\\helpconfig.py\", line 112, in pytest_cmdline_parse",
+      "    config = yield",
+      "             ^^^^^",
+      "  File \"C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pytest-lazy-fixture-pytest7-to-8--single-shot\\repo\\.upv-venv\\Lib\\site-packages\\pluggy\\_execution.py\", line 147, in _multicall",
+      "    res = hook_impl.function(*args)",
+      "  File \"C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pytest-lazy-fixture-pytest7-to-8--single-shot\\repo\\.upv-venv\\Lib\\site-packages\\_pytest\\config\\__init__.py\", line 1146, in pytest_cmdline_parse",
+      "    self.parse(args)",
+      "    ~~~~~~~~~~^^^^^^",
+      "  File \"C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pytest-lazy-fixture-pytest7-to-8--single-shot\\repo\\.upv-venv\\Lib\\site-packages\\_pytest\\config\\__init__.py\", line 1527, in parse",
+      "    self._preparse(args, addopts=addopts)",
+      "    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^",
+      "  File \"C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pytest-lazy-fixture-pytest7-to-8--single-shot\\repo\\.upv-venv\\Lib\\site-packages\\_pytest\\config\\__init__.py\", line 1412, in _preparse",
+      "    self.pluginmanager.load_setuptools_entrypoints(\"pytest11\")",
+      "    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^",
+      "  File \"C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pytest-lazy-fixture-pytest7-to-8--single-shot\\repo\\.upv-venv\\Lib\\site-packages\\pluggy\\_manager.py\", line 522, in load_setuptools_entrypoints",
+      "    self.register(plugin, name=ep.name)",
+      "    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^",
+      "  File \"C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pytest-lazy-fixture-pytest7-to-8--single-shot\\repo\\.upv-venv\\Lib\\site-packages\\_pytest\\config\\__init__.py\", line 503, in register",
+      "    plugin_name = super().register(plugin, name)",
+      "  File \"C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pytest-lazy-fixture-pytest7-to-8--single-shot\\repo\\.upv-venv\\Lib\\site-packages\\pluggy\\_manager.py\", line 239, in register",
+      "    self._verify_hook(hook, hookimpl)",
+      "    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^",
+      "  File \"C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\phase5\\pytest-lazy-fixture-pytest7-to-8--single-shot\\repo\\.upv-venv\\Lib\\site-packages\\pluggy\\_manager.py\", line 465, in _verify_hook",
+      "    raise PluginValidationError(",
+      "    ...<5 lines>...",
+      "    )",
+      "pluggy._manager.PluginValidationError: Plugin 'lazy-fixture' for hook 'pytest_runtest_call'",
+      "hookimpl definition: pytest_runtest_call(item)",
+      "Declared as wrapper=True or hookwrapper=True but function is not a generator function"
+    ]
+  },
+  "reasons": [
+    "pytest exit 1: STUCK"
+  ]
+}

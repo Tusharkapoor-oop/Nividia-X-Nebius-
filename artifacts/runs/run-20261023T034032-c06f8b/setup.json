@@ -1,0 +1,55 @@
+{
+  "commands": [
+    [
+      "C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261023T034032-c06f8b\\repo\\.upv-venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "install",
+      "--quiet",
+      "-e",
+      "."
+    ],
+    [
+      "C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261023T034032-c06f8b\\repo\\.upv-venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "install",
+      "--quiet",
+      "-r",
+      "requirements.txt"
+    ],
+    [
+      "C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261023T034032-c06f8b\\repo\\.upv-venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "install",
+      "--quiet",
+      "pytest"
+    ],
+    [
+      "C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261023T034032-c06f8b\\repo\\.upv-venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "install",
+      "--quiet",
+      "pytest-mock"
+    ],
+    [
+      "C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261023T034032-c06f8b\\repo\\.upv-venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "install",
+      "--quiet",
+      "pytest==8.4.1"
+    ]
+  ],
+  "commit": "18ec85edb5e27c933733f748c685b2fd083198d7",
+  "dirty": false,
+  "error": null,
+  "package": "pytest",
+  "repo": "C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\artifacts\\runs\\run-20261023T034032-c06f8b\\repo",
+  "run_id": "run-20261023T034032-c06f8b",
+  "source": "C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\cases\\pytest-lazy-fixture",
+  "status": "ok",
+  "to_version": "8.4.1"
+}

@@ -1,0 +1,41 @@
+{
+  "iteration": 3,
+  "tier": "strong",
+  "status": "GREEN",
+  "detail": "",
+  "edits": [
+    {
+      "path": "src/invoicekit/models.py",
+      "action": "write",
+      "diff": "--- a/src/invoicekit/models.py\n+++ b/src/invoicekit/models.py\n@@ -11,7 +11,7 @@\n from decimal import Decimal\n from typing import Any, Dict, List\n \n-from pydantic import BaseModel, Field, root_validator, validator\n+from pydantic import BaseModel, Field, field_validator, model_validator\n \n EMAIL_PATTERN = r\"^[^@\\s]+@[^@\\s]+\\.[A-Za-z]{2,}$\"\n MAX_LINE_ITEMS = 50\n@@ -21,10 +21,9 @@\n     \"\"\"The party being invoiced.\"\"\"\n \n     name: str = Field(..., min_length=1, max_length=80)\n-    email: str = Field(..., regex=EMAIL_PATTERN)\n+    email: str = Field(..., pattern=EMAIL_PATTERN)\n \n-    class Config:\n-        allow_mutation = False\n+    model_config = {\"frozen\": True}\n \n \n class LineItem(BaseModel):\n@@ -34,10 +33,10 @@\n     quantity: int = Field(..., gt=0, le=1000)\n     unit_price: Decimal = Field(..., ge=0)\n \n-    class Config:\n-        allow_mutation = False\n+    model_config = {\"frozen\": True}\n \n-    @validator(\"sku\", pre=True)\n+    @field_validator(\"sku\", mode=\"before\")\n+    @classmethod\n     def _normalise_sku(cls, value: Any) -> Any:\n         if isinstance(value, str):\n             return value.strip().upper()\n@@ -52,16 +51,17 @@\n     line_items: List[LineItem]\n     discount_pct: Decimal = Field(default=Decimal(\"0\"), ge=0, le=100)\n \n-    class Config:\n-        allow_mutation = False\n+    model_config = {\"frozen\": True}\n \n-    @validator(\"currency\", pre=True)\n+    @field_validator(\"currency\", mode=\"before\")\n+    @classmethod\n     def _normalise_currency(cls, value: Any) -> Any:\n         if isinstance(value, str):\n             return value.strip().upper()\n         return value\n \n-    @root_validator\n+    @model_validator(mode=\"before\")\n+    @classmethod\n     def _check_invoice_shape(cls, values: Dict[str, Any]) -> Dict[str, Any]:\n         items = values.get(\"line_items\") or []\n         if not items:\n@@ -73,4 +73,4 @@\n     @classmethod\n     def from_payload(cls, payload: Dict[str, Any]) -> \"Invoice\":\n         \"\"\"Build an invoice from a raw mapping (API payload, JSON body, ...).\"\"\"\n-        return cls.parse_obj(payload)\n+        return cls.model_validate(payload)\n"
+    }
+  ],
+  "verify_outcome": {
+    "status": "GREEN",
+    "run_id": "run-20261028T035158-9e66c8",
+    "result": {
+      "exit_code": 0,
+      "passed": 13,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xfailed": 0,
+      "xpassed": 0,
+      "duration_s": 0.03,
+      "output_tail": [
+        ".............                                                            [100%]",
+        "============================== warnings summary ===============================",
+        "tests/test_report.py::test_summary_payload_exposes_customer_and_items",
+        "tests/test_report.py::test_summary_payload_is_json_serialisable",
+        "  C:\\Users\\ACER\\Downloads\\Nividia X nebius\\upgradepilot\\bench\\workdirs\\demo\\agent\\repo\\src\\invoicekit\\report.py:33: PydanticDeprecatedSince20: The `dict` method is deprecated; use `model_dump` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/",
+        "    payload = invoice.dict()",
+        "",
+        "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+        "13 passed, 2 warnings in 0.03s"
+      ]
+    },
+    "reasons": [
+      "pytest exit 0: GREEN"
+    ]
+  }
+}
